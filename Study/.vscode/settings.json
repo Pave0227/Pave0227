@@ -1,0 +1,35 @@
+{
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.mouseWheelZoom": true,
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "Source Code Pro ExtraLight",
+  "editor.codeLensFontFamily": "Arial",
+  "workbench.colorTheme": "Monokai",
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "#ffbb00"
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.formatOnType": true,
+  "prettier.endOfLine": "auto",
+  "java.format.settings.url": "Study\\.vscode\\java-formatter.xml",
+
+  "[javascript]": 
+  {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[html]": 
+  {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[css]": 
+  {
+    "editor.defaultFormatter": "redhat.java"
+  }
+}

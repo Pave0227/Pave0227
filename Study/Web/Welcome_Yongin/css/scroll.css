@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+  width: 5px; /* 세로축 스크롤바 길이 */
+  height: 5px; /* 가로축 스크롤바 길이 */
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(70, 70, 70);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(97, 187, 207, 0.7);
+}
+::-webkit-resizer {
+  background-color: green;
+}
+
+.scroll-test::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-test::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scroll-test::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}

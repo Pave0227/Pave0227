@@ -1,0 +1,24 @@
+.
+{
+    COPYRIGHT(C) YONGIN CITY. ALL RIGHTS RESERVED
+}
+
+en
+{
+    Wecome to Yongin Sity
+
+    Introduction
+    Location
+    Event
+    Parking
+
+    Login
+
+    Privacy Policy
+    Copyright Policy
+    Complaint information
+    Contact us
+
+    923, Dongtangiheung-ro, Giheung-gu, Yongin-si, Gyeonggi-do
+              (Gongse-dong)
+}
