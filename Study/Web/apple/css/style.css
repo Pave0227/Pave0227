@@ -2,6 +2,8 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  overflow: hidden;
+  touch-action: none;
 }
 .back_video {
   width: 100vw;
@@ -9,10 +11,11 @@ body {
   overflow: hidden;
   margin: 0px auto;
   position: absolute;
+  background-color: black;
 }
 video {
   width: 100vw;
-  height: 125vh;
+  height: 100vh;
   opacity: 50%;
   z-index: 1;
   background-size: cover;
@@ -51,16 +54,14 @@ video {
   height: 12vh;
   z-index: 2;
   background-color: black;
-  position: absolute;
+  position: relative;
 }
 
 .bottom_menu {
   width: 100vw;
-  height: 10vh;
-  bottom: 0px;
-  z-index: 2;
+  height: 12vh;
   background-color: black;
-  position: absolute;
+  position: relative;
 }
 
 /* menu */
@@ -68,7 +69,7 @@ video {
 .rotate {
   width: 100vw;
   height: 12vh;
-  overflow: auto;
+  overflow: hidden;
 }
 .transform {
   width: 120vw;
@@ -77,10 +78,9 @@ video {
   font-weight: bold;
   top: -350%;
   left: 0%;
-  position: relative;
   -webkit-transform: rotate(23deg);
   word-spacing: 10px;
-  scrollbar-width: none;
+  position: relative;
   cursor: default;
   opacity: 50%;
   z-index: 0;

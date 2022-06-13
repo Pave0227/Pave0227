@@ -36,6 +36,8 @@
 }
 
 body {
+  overflow: hidden;
+  touch-action: none;
   font-family: "Kdam Thmor Pro", sans-serif;
 }
 
@@ -57,7 +59,7 @@ header {
   grid-template-areas: "logo nav login mar";
   position: absolute;
   width: 100vw;
-  height: 10vh;
+  height: 6vh;
   line-height: 64px;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 1px 70px rgb(197, 197, 197);
@@ -92,9 +94,9 @@ footer {
   z-index: 1;
   background-color: rgb(0, 0, 0);
   width: 100vw;
-  height: 30vh;
+  height: 15vh;
   position: absolute;
-  bottom: -30%;
+  bottom: 0%;
   opacity: 80%;
   box-shadow: 0px 0.5px 50px rgb(197, 197, 197);
 }
@@ -107,7 +109,7 @@ footer {
 }
 .logo a {
   letter-spacing: 5px;
-  font-size: 25px;
+  font-size: 2.8vmin;
   font-weight: 500;
 }
 
@@ -194,7 +196,7 @@ a.login {
 }
 
 .footer_main ul li a:hover::before {
-  height: 5vmin;
+  height: 2.5em;
   /* transition-delay 추가 0.6초후 진행됨 */
   transition: height 0.3s 0.6s;
 }
@@ -211,7 +213,7 @@ a.login {
 
 .address {
   display: block;
-  font-size: 2vmin;
+  font-size: 1.5vmin;
   line-height: 40px;
 }
 
@@ -223,8 +225,8 @@ a.login {
 
 .lang_panel {
   z-index: 0;
-  width: 130px;
-  height: 200px;
+  width: 3vim;
+  height: 3.5vim;
   background-color: rgba(0, 0, 0, 0.829);
   position: absolute;
   top: 70%;
@@ -311,7 +313,7 @@ body {
 
 .social_menu ul {
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
   padding: 0;
   margin: 0;

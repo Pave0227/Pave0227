@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>상품선택</legend>
+        <p><b>주문할 상품을 선택해라</b></p>
+        <!-- 체크박스와 라디오버튼에서 사용할수 있는 속성중
+        value는 선택한 체크박스나 라디오 버튼을 서버에게 알려줄때 넘겨줄 값을 지정한다.
+          영문이나 숫자가 들어가야함. -->
+        <label><input type="checkbox" value="s1" />선물용 100g</label>
+        <label><input type="checkbox" value="s2" />선물용 200g</label>
+        <label><input type="checkbox" value="c1" />가정용 100g</label>
+        <label><input type="checkbox" value="c2" />가정용 200g</label>
+        <p>포장선택</p>
+        <label><input type="" name="gift" value="yes" />선물포장</label>
+        <label><input type="radio" name="gift" value="no" />포장 ㄴㄴ</label>
+
+        <input type="range" />
+        <input type="month" />
+        <input type="week" />
+      </fieldset>
+    </form>
+  </body>
+</html>

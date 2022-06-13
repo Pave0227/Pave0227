@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td{
+            border: 1px dotted rgb(0, 0, 0);
+        }
+        th,td{
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+  <!-- 열을 묶어주는 col, colgroup
+col : 열을 1개만 지정할때.
+colgroup : col태그를 2개이상 묶어서 사용
+
+위 2개의 태그는 반드시 caption 태그 다음에 써야 한다.
+
+col태그를 사용할때는 colgroup태그안에 col태그를 포함해 표 전체
+열의 개수만큼 col태그를 넣어야 한다.
+-->
+    <h2>상품구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품구성</caption>
+        <colgroup>
+            <!-- 첫번째 열의 배경색 지정 -->
+        <col style="background-color: rgb(151, 199, 107);">
+        <col>
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        </colgroup>
+
+        <thead>
+        <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">선물용</td>
+            <td>3kg</td>
+            <td>11~15개</td>
+            <td>35,000원</td>
+        </tr>
+        <tr>
+            <td>5kg</td>
+            <td>12~20개</td>
+            <td>100,000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">가정용</td>
+            <td>3kg</td>
+            <td>10~15개</td>
+            <td>10,000원</td>
+        </tr>
+        <tr>
+            <td>5kg</td>
+            <td>12~15개</td>
+            <td>150,000원</td>
+        </tr>
+    </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* border: 2px solid black; */
+        margin-bottom: 20px;
+      }
+
+      .box1 {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 10px solid #ccc;
+      }
+      .box2 {
+        /* 가변너비 : */
+        /* width: 50%; */
+        box-sizing: border-box;
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 10px solid rgb(165, 41, 41);
+        border-radius: 10px;
+      }
+      #round {
+        border-radius: 10px;
+      }
+      /* width, height 속성은 박스모델에서 콘텐츠 주변의
+      여백이나 테두리를 뺀 콘텐츠 영역의 크기를 가리킨다.
+      
+      box-sizing : 박스 모델의 너비와 높이를 어케 결정할꺼냐?
+      속성 : border-box 테두리까지 포함해서 너비값을 지정한다.
+             content-box 콘텐츠 영역만 너비값을 지정  default
+      
+      
+      */
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <img id="round" src="" alt="" />
+  </body>
+</html>
