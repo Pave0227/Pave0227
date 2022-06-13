@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.back_video {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  position: absolute;
+}
+video {
+  width: 100vw;
+  height: 125vh;
+  opacity: 50%;
+  z-index: 1;
+  background-size: cover;
+}
+
+/* video */
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.intro h2 {
+  position: relative;
+  top: 15%;
+  font-weight: bold;
+  color: rgba(255, 255, 255);
+  opacity: 60%;
+  font-size: 30px;
+}
+
+.intro p {
+  position: relative;
+  top: 20%;
+  font-weight: bold;
+  margin-top: 10px;
+  color: rgba(255, 255, 255);
+  opacity: 60%;
+}
+
+/* intro */
+
+.top_menu {
+  width: 100vw;
+  height: 12vh;
+  z-index: 2;
+  background-color: black;
+  position: absolute;
+}
+
+.bottom_menu {
+  width: 100vw;
+  height: 10vh;
+  bottom: 0px;
+  z-index: 2;
+  background-color: black;
+  position: absolute;
+}
+
+/* menu */
+
+.rotate {
+  width: 100vw;
+  height: 12vh;
+  overflow: auto;
+}
+.transform {
+  width: 120vw;
+  height: 600px;
+  font-size: 7vmin;
+  font-weight: bold;
+  top: -350%;
+  left: 0%;
+  position: relative;
+  -webkit-transform: rotate(23deg);
+  word-spacing: 10px;
+  scrollbar-width: none;
+  cursor: default;
+  opacity: 50%;
+  z-index: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

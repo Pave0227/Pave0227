@@ -57,6 +57,7 @@ header {
   grid-template-areas: "logo nav login mar";
   position: absolute;
   width: 100vw;
+  height: 10vh;
   line-height: 64px;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 1px 70px rgb(197, 197, 197);
@@ -91,8 +92,9 @@ footer {
   z-index: 1;
   background-color: rgb(0, 0, 0);
   width: 100vw;
+  height: 30vh;
   position: absolute;
-  bottom: -30px;
+  bottom: -30%;
   opacity: 80%;
   box-shadow: 0px 0.5px 50px rgb(197, 197, 197);
 }
@@ -192,7 +194,7 @@ a.login {
 }
 
 .footer_main ul li a:hover::before {
-  height: 45px;
+  height: 5vmin;
   /* transition-delay 추가 0.6초후 진행됨 */
   transition: height 0.3s 0.6s;
 }
@@ -202,13 +204,14 @@ a.login {
 .address {
   width: 100vw;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 15px;
   text-align: center;
   color: rgb(118, 118, 118);
 }
 
 .address {
   display: block;
+  font-size: 2vmin;
   line-height: 40px;
 }
 
@@ -224,7 +227,7 @@ a.login {
   height: 200px;
   background-color: rgba(0, 0, 0, 0.829);
   position: absolute;
-  top: 72%;
+  top: 70%;
   left: 50.2%;
   transform: translate(-50%, -50%);
   display: block;
@@ -259,7 +262,6 @@ video {
   height: 100%;
 }
 .jb-text blockquote {
-  margin-top: -24px;
   font-size: 24px;
   color: #b6b6b6;
   top: 50%;
@@ -267,7 +269,8 @@ video {
 }
 
 .jb-text blockquote p {
-  margin-top: 70px;
+  margin-top: 5vh;
+
   opacity: 90%;
 }
 /* video ----------------------------------------------------------- */
@@ -308,7 +311,7 @@ body {
 
 .social_menu ul {
   position: absolute;
-  top: 83%;
+  top: 95%;
   left: 50%;
   padding: 0;
   margin: 0;

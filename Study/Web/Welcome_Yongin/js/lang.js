@@ -49,10 +49,13 @@ function Div_Ctrl() {
   // div 태그 생성
   var div = document.createElement("div");
   div.className = "lang_panel";
+  div.id = "lang_panel2";
 
   // social_menu 클래스 찾아서 자식개체로 div 넣어줌
   // var social = document.querySelector("#social");
-  var social = document.getElementsByClassName("social_menu")[0];
+  // var social = document.getElementsByClassName("social_menu")[0];
+  var social = document.querySelector(".social_menu");
+
   social.appendChild(div);
 
   // lang_panel 클래스 엘리먼트 지정
