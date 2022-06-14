@@ -2,7 +2,7 @@ var options = {
   imgSrc1: "img/main.jpg",
   imgSrc2: "img/main2.webp",
   containerName: "placeholder",
-  columns: 30,
+  columns: 2,
   margin: 2,
 };
 

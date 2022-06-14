@@ -1,0 +1,27 @@
+.img {
+  display: -webkit-box;
+  position: absolute;
+  top: 20%;
+  width: 100vw;
+  -webkit-box-pack: center;
+}
+
+#img1 {
+  width: 300px;
+  height: 300px;
+}
+
+#img2 {
+  width: 300px;
+  height: 300px;
+}
+
+#img3 {
+  width: 300px;
+  height: 300px;
+}
+
+.img :nth-child(1) {
+  border: 2px solid;
+  border-color: red;
+}

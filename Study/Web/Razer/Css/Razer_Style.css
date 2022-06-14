@@ -1,0 +1,140 @@
+:root body {
+  text-align: start;
+}
+/* @media (min-width : 768px) */
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: black;
+}
+@font-face {
+  font-family: "RazerF5";
+  src: url("RazerF5.woff") format("woff");
+}
+/* body ------------------------------------------------------------------- */
+header {
+  font-family: "RazerF5";
+  color: #999;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: black;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  outline-style: none !important;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  min-height: 3.5rem;
+  outline-style: none !important;
+  position: relative;
+  border-bottom: 1px solid #44d62c;
+}
+
+.header img {
+  width: 33px;
+  position: relative;
+  top: -5px;
+  margin-left: 0.3vw;
+  vertical-align: middle;
+}
+
+header .header > * {
+  display: block;
+  flex: none;
+}
+
+.header nav {
+  margin-right: auto;
+  min-height: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
+  display: inline-block;
+  box-sizing: border-box;
+  flex: 100%;
+}
+
+.menu_bar {
+  display: flex;
+  max-width: 100%;
+  height: 7vh;
+  position: absolute;
+  line-height: 15px;
+  list-style: none;
+  font-size: 15px;
+  left: 8.5%;
+  text-align: center;
+}
+
+.menu_bar li {
+  margin-top: 1px;
+  cursor: pointer;
+  margin: 0 2.2vw;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.menu_bar li:hover {
+  color: rgb(255, 255, 255);
+}
+
+.intro {
+  position: fixed;
+  display: block;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.726);
+  text-align: center;
+  height: 40px;
+  color: white;
+  line-height: 40px;
+  font-size: 14px;
+  word-spacing: 0.3px;
+  font-weight: 300;
+}
+
+.search_icon {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  height: 1.25rem;
+  margin-top: -0.1875rem;
+  order: 1;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-indent: -200px;
+  vertical-align: middle;
+  z-index: 3;
+}
+
+.search_icon::before {
+  font-family: phoenix-icons !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  content: "";
+  display: block;
+  font-weight: 700;
+  padding-left: 0.0625rem;
+  padding-top: 0.0625rem;
+  text-indent: 0;
+}
+
+.cart img {
+  top: 2px;
+  width: 20px;
+  opacity: 80%;
+  border-image: fill;
+}
+/* header ---------------------------------------------------------------- */
