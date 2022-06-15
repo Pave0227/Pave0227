@@ -22,7 +22,7 @@ body {
 }
 @font-face {
   font-family: "RazerF5", "RazerF5Bold", "RazerF5Light", "RazerF5SemiBold";
-  src: url("font/RazerF5.woff") format("woff");
+  src: url("font/RazerF5.woff") format("otf");
   src: url("font/RazerF5Bold.woff") format("woff");
   src: url("font/RazerF5Light.woff") format("woff");
   src: url("font/RazerF5SemiBold.woff") format("woff");
