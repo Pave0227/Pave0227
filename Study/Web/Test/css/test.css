@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  font-size: 15px;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  box-shadow: 0px 1px 5px black;
+}
+
+.card > header {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.card > p {
+  padding: 0.005rem;
+}

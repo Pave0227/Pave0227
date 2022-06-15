@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+        left:기준위치와 요소사이에 왼쪽으로 얼마나 떨어져있냐
+        top:기준위치와 요소사이에 위쪽으로 얼마나 떨어져있냐
+        right:기준위치와 요소사이에 오른쪽으로 얼마나 떨어져있냐
+        bottom:기준위치와 요소사이에 아래쪽으로 얼마나 떨어져있냐
+     -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      #pos1 {
+        position: absolute;
+        /* 왼쪽에서 50px떨어지게 */
+        left: 50px;
+        /* 위쪽에서 50px떨어지게 */
+        top: 50px;
+      }
+      #pos2 {
+        position: absolute;
+        right: 100px;
+        top: 100px;
+      }
+      #pos3 {
+        position: absolute;
+        left: 100px;
+        bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="pos1">
+      청국장은 콩의 크기나 색과 상관없이 기호에 맞는 콩을 삶아서 쓴다. 삶은 콩에
+      볏짚을 넣어 자연발효를 시키므로 볏짚의 바실리스균 뿐만이 아닌 공기중의
+      바실리스균에도 영향을 받는다. 또 청국장은 만들어지는 고장, 만드는 사람, 그
+      날의 날씨, 사용한 콩의 종류 등에 의해 맛이 다양해지고 각기 다양한 균이
+      발생하여 면역력을 더욱 높여준다.
+    </p>
+    <p id="pos2">
+      청국장은 콩의 크기나 색과 상관없이 기호에 맞는 콩을 삶아서 쓴다. 삶은 콩에
+      볏짚을 넣어 자연발효를 시키므로 볏짚의 바실리스균 뿐만이 아닌 공기중의
+      바실리스균에도 영향을 받는다. 또 청국장은 만들어지는 고장, 만드는 사람, 그
+      날의 날씨, 사용한 콩의 종류 등에 의해 맛이 다양해지고 각기 다양한 균이
+      발생하여 면역력을 더욱 높여준다.
+    </p>
+    <p id="pos3">
+      청국장은 콩의 크기나 색과 상관없이 기호에 맞는 콩을 삶아서 쓴다. 삶은 콩에
+      볏짚을 넣어 자연발효를 시키므로 볏짚의 바실리스균 뿐만이 아닌 공기중의
+      바실리스균에도 영향을 받는다. 또 청국장은 만들어지는 고장, 만드는 사람, 그
+      날의 날씨, 사용한 콩의 종류 등에 의해 맛이 다양해지고 각기 다양한 균이
+      발생하여 면역력을 더욱 높여준다.
+    </p>
+  </body>
+</html>

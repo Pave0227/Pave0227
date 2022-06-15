@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: flex;
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 30px;
+      }
+      .box {
+        padding: 5px 45px;
+        margin: 5px;
+        width: 80px;
+        background-color: black;
+      }
+      #option1 {
+        flex-wrap: nowrap;
+      }
+      #option2 {
+        flex-wrap: wrap;
+      }
+      #option3 {
+        flex-wrap: wrap-reverse;
+      }
+
+      p {
+        color: #eee;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <!-- 플렉스 항목의 줄을 바꿔주는 속성
+    flex-wrap : 플렉스 컨테이너 너비보다 많은 플렉스 항목이 있을경우 줄을 바꿀꺼임?
+    속성값으로 wrap, wrap-reverse로 지정한후 웹 브라우저 화면의 너비를 늘리거나
+    줄여보면 컨테이너 너비에 따라 여러줄로 표시된다.
+
+    nowrap : 플렉스항목을 한줄에 ㄱㄱ default
+    wrap : 항목을 여러 줄에 표시
+    wrap-reverse : 플렉스 항목을 여러줄에 표시하지만 시작점과 끝점이 바뀐다.
+
+-->
+  <body>
+    <div class="container" id="option1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+      <div class="box"><p>5</p></div>
+      <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="option2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+      <div class="box"><p>5</p></div>
+      <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="option3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+      <div class="box"><p>5</p></div>
+      <div class="box"><p>6</p></div>
+    </div>
+  </body>
+</html>

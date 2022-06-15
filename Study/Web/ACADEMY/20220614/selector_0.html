@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 120px;
+        margin: 10px;
+        display: inline-block;
+      }
+      li a {
+        text-decoration: none;
+        font-size: 15px;
+        padding: 5px 20px;
+        font-weight: bold;
+      }
+      /* 속성 선택자 .대괄호 사이에 원하는 속성을 입력한다.
+      아래는 a태그 중에서href속성이 있는 요소를 선택
+      */
+      a[href] {
+        background: yellow;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a>메인메뉴</a></li>
+      <li><a href="#">김치찌개</a></li>
+      <li><a href="#">순두부</a></li>
+      <li><a href="#">청국장</a></li>
+      <li><a href="#">마라탕</a></li>
+    </ul>
+  </body>
+</html>
