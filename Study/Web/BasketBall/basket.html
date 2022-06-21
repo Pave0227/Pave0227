@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="basket.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div-scroreboard">
+      <div class="div-scoreboard inner">
+        <div class="div-shots-left">
+          <span>남은 슛 횟수</span>
+          <span id="shot-left">15</span>
+        </div>
+        <div class="div-score">
+          <div class="div-score-name">컴퓨터</div>
+          <div id="computer-score" class="div-score-number">0</div>
+        </div>
+        <div class="div-score">
+          <div class="div-score-name">유저</div>
+          <div id="user-score" class="div-score-number">0</div>
+        </div>
+        <div id="text">컴퓨터부터 시작</div>
+      </div>
+    </div>
+    <div class="div-controll-panel">
+      <div id="div-computer" class="div-panel">
+        <div class="div-control-name">
+          <button onclick="On_Computer_Shot()">슛하기</button>
+        </div>
+      </div>
+      <div id="div-user" class="div-panel">
+        <div class="div-control-name">
+          <button>2점슛</button>
+          <button>3점슛</button>
+        </div>
+      </div>
+    </div>
+    <script src="basket.js"></script>
+  </body>
+</html>

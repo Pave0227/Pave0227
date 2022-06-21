@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Rock.css" />
+  </head>
+  <body>
+    <main>
+      <div id="background">
+        <img
+          src="https://i.ytimg.com/vi/WN8nGUJNF68/maxresdefault.jpg"
+          alt=""
+        />
+
+        <div class="your_area">
+          <button onclick="Game(this.id)" id="Scissor">가위</button>
+          <button onclick="Game(this.id)" id="Rock">바위</button>
+          <button onclick="Game(this.id)" id="Paper">보</button>
+          <input type="number" id="gamble" onkeyup="">
+          <h2 id="btn">배팅하세요</h2>
+          <h4>판돈 : <span id="money">10000</span></h2>
+        </div>
+
+        <div class="computer_area">
+          <h4>Round <br> <span id="round">0</span>/10</h4>
+          <h2 id="action">버튼을 누르세요</h2>
+          <h3 id="have_this"></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="Rock.js"></script>
+</html>
