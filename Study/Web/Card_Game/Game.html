@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Game.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main_area">
+      <div class="card_area">
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <div id="card3"></div>
+      </div>
+      <div class="bet_area">
+        <button id="plus_btn" onclick="Bet_Control(this.id)">+</button>
+        <button id="minus_btn" onclick="Bet_Control(this.id)">-</button>
+        <button id="start" onclick="Card_Game()">진행</button>
+        <button id="all_in" onclick="Bet_Control(this.id)">아도</button>
+      </div>
+      <div class="status">
+        <span>소지금: <span id="money">0</span></span>
+        <span>배팅액: <span id="bet_status">0</span></span>
+        <span>배팅 한도: <span id="bet_max">0</span></span>
+      </div>
+      <div class="result_area">
+        <span><span id="round"></span> 라운드</span>
+        <span id="result"></span>
+      </div>
+    </main>
+    <script src="Game.js"></script>
+  </body>
+</html>

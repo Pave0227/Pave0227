@@ -1,0 +1,74 @@
+.main_area {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.card_area {
+  position: relative;
+  top: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#card1,
+#card2,
+#card3 {
+  width: 150px;
+  height: 70px;
+  background-color: black;
+  text-align: center;
+  line-height: 70px;
+}
+
+.bet_area {
+  position: relative;
+  top: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 100px;
+  margin-left: 30px;
+  height: 50px;
+}
+
+.status {
+  position: relative;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.status span {
+  margin-left: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  border-color: black;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.result_area {
+  position: relative;
+  top: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100px;
+}
+
+.result_area span {
+  margin-left: 30px;
+}

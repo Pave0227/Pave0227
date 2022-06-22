@@ -1,10 +1,28 @@
-function Person(name) {
-  this.name = name;
+function Number_Control(click_id) {
+  let panel = document.getElementById("panel");
+
+  if (click_id == "inc") {
+    panel.innerHTML = Number(panel.innerHTML) + 1;
+  } else {
+    panel.innerHTML = Number(panel.innerHTML) - 1;
+  }
 }
 
-var foo = new Person("Lee");
+// console.log(String.__proto__ === Function.prototype);
+// console.log(Function.prototype.__proto__ === Object.prototype);
 
-console.dir(Person); // prototype 프로퍼티가 있다.
-console.dir(foo); // prototype 프로퍼티가 없다.
+// class User {
 
-console.log(Person.prototype === foo.__proto__);
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayHi() {
+//     alert(this.name);
+//   }
+
+// }
+
+// // 사용법:
+// let user = new User("John");
+// user.sayHi();

@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #panel {
+        width: 400px;
+        height: 100px;
+        font-size: 50px;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
+    <div id="panel">0</div>
+    <button id="inc" onclick="Number_Control(this.id)">+</button>
+    <button id="dec" onclick="Number_Control(this.id)">-</button>
     <script src="js/test.js"></script>
   </body>
 </html>
