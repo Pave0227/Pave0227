@@ -1,8 +1,9 @@
-let money = 10000;
+let money = 1000;
 let round = 3;
-
 let bet = 100 * Math.floor(round / 3);
 let max = 300 * Math.floor(round / 3);
+
+// ----------------------------------------------------------
 
 let money_status = document.getElementById("money");
 let bet_status = document.getElementById("bet_status");
@@ -10,18 +11,27 @@ let bet_max = document.getElementById("bet_max");
 let result = document.getElementById("result");
 let round_text = document.getElementById("round");
 
-//
-
 let card_type = ["Heart", "Clover", "Spade", "Diamond"];
 let card_list = new Array();
 let draw_card = new Array();
 
-for (let i = 0; i < 4; i++) {
-  for (let x = 1; x <= 13; x++) {
-    card_list.push(x + " " + card_type[i]);
+function Re_Start() {
+  card_list = [];
+  for (let i = 0; i < 4; i++) {
+    for (let x = 1; x <= 13; x++) {
+      card_list.push(x + " " + card_type[i]);
+    }
   }
+  money_status.innerText = money;
+  round = 3;
+  bet = 100 * Math.floor(round / 3);
+  max = 300 * Math.floor(round / 3);
+  round_text.innerText = round - 2;
+  bet_status.innerText = bet;
+  bet_max.innerText = max;
+  result.innerHTML = "";
 }
-
+Re_Start();
 let card1 = document.getElementById("card1");
 let card2 = document.getElementById("card2");
 let card3 = document.getElementById("card3");
@@ -31,11 +41,8 @@ function Setting() {
   bet = 100 * Math.floor(round / 3);
   max = 300 * Math.floor(round / 3);
 
-  money_status.innerText = money;
   bet_status.innerText = bet;
   bet_max.innerText = max;
-
-  round_text.innerText = round - 2;
 
   draw_card = [];
   while (draw_card.length !== 3) {
@@ -55,8 +62,12 @@ function Setting() {
 
   card1.innerHTML = draw_card[0];
   card2.innerHTML = draw_card[1];
-  card3.innerHTML = draw_card[2];
 
+  if (card_list.length >= 3 || Number(money_status.innerText) >= bet) {
+    card1.innerHTML = draw_card[0];
+    card2.innerHTML = draw_card[1];
+    round_text.innerText = round - 2;
+  }
   round++;
 }
 
@@ -65,17 +76,20 @@ function Card_Game() {
   let card2 = parseInt(draw_card[1]);
   let card3 = parseInt(draw_card[2]);
 
-  if (card3 > card1 && card3 < card2) {
+  if (card_list.length < 3) {
+    result.innerHTML = "카드를 전부 소진했습니다...끝났습니다.";
+  } else if (Number(money_status.innerText) <= 0) {
+    result.innerHTML = "돈을 다 잃었어요...끝났습니다.";
+  } else if (card3 > card1 && card3 < card2) {
     result.innerHTML = "이겼습니다";
-    Setting();
     money_status.innerText =
       Number(money_status.innerText) + Number(bet_status.innerText) * 2;
+    Setting();
   } else if (card3 == card1 || card2 == card1) {
     result.innerHTML = "비겼습니다";
     Setting();
   } else {
     result.innerHTML = "졌습니다";
-
     money_status.innerText =
       Number(money_status.innerText) - Number(bet_status.innerText);
     Setting();
