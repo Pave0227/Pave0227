@@ -1,17 +1,56 @@
-let User_Data = {
-  name: "None",
-  setName: function (firstName, lastName) {
-    this.name = firstName + " " + lastName;
-  },
-};
+class Circle {
+  constructor(radius) {
+    this.radius = radius; // 반지름
+  }
 
-function Get_User_Name(firstName, lastName, callback, obj) {
-  callback.call(obj, firstName, lastName);
+  // 원의 지름
+  getDiameter() {
+    return 2 * this.radius;
+  }
+
+  // 원의 둘레
+  getPerimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+
+  // 원의 넓이
+  getArea() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
 }
 
-Get_User_Name("김", "무무", User_Data.setName, User_Data);
+// 자식 클래스
+class Cylinder extends Circle {
+  constructor(height) {
+    super(height);
+    this.height = height;
+  }
 
-console.log(User_Data.name); // None
-console.log(window.name); // 김 무무
+  // 원통의 넓이: 부모 클래스의 getArea 메소드를 오버라이딩하였다.
+  getArea() {
+    // (원통의 높이 * 원의 둘레) + (2 * 원의 넓이)
+    return this.height * super.getPerimeter() + 2 * super.getArea();
+  }
 
-//콜백함수는 기본적으로 콜 바이 밸류 지만, call을 이용해 인자를 넘겨줄 객체을 지정해주면 값을 넘겨줄 수 있다.
+  // 원통의 부피
+  getVolume() {
+    return super.getArea() * this.height;
+  }
+}
+
+// 반지름이 2, 높이가 10인 원통
+const cylinder = new Cylinder(2);
+
+// 원의 지름
+console.log(cylinder.getDiameter()); // 4
+// 원의 둘레
+console.log(cylinder.getPerimeter()); // 12.566370614359172
+// 원통의 넓이
+console.log(cylinder.getArea()); // 150.79644737231007
+// 원통의 부피
+console.log(cylinder.getVolume()); // 125.66370614359172
+
+// cylinder는 Cylinder 클래스의 인스턴스이다.
+console.log(cylinder instanceof Cylinder); // true
+// cylinder는 Circle 클래스의 인스턴스이다.
+console.log(cylinder instanceof Circle); // true

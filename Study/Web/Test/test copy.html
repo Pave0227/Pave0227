@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      const $box = document.querySelector(".box");
+      const init_mouse_pos = { x: 0, y: 0 };
+      const off_set = { x: 0, y: 0 };
+
+      //마우스 포인터 좌표 MouseEvent타입의 이벤트 객체에서 제공한다.
+      //마우스 포인터 좌표 정보를 나태는 screenx/screeny ,client, offsetX,offsetY 프로퍼티를 제공한다
+      //clientx,y는 웹페이지의 가시영역을 기준을 마우스 포인터 좌표를 나타낸다.
+
+      const move = (e) => {
+        off_set.x = e.clientX - init_mouse_pos.x;
+        off_set.y = e.clientY - init_mouse_pos.y;
+
+        $box.style.transform = "translate3d(${off_set.x}px, $(off_set.y)px,0";
+      };
+      $box.addEventListener("mousedown", (e) => {
+        init_mouse_pos.x = e.clientX - off_set.x;
+        init_mouse_pos.y = e.clientY - off_set.y;
+
+        document.addEventListener("mousemove", move);
+      });
+
+      document.addEventListener("mouseup", () => {
+        document.removeEventListener("mousemove", move);
+      });
+    </script>
+  </body>
+</html>
