@@ -1,5 +1,7 @@
 package PG_Lv_2.기능개발_007;
 
+import java.util.ArrayList;
+
 // byte         8bits    -2^7 ~ 2^7-1 (-128 ~ 127)
 // short       16bits    -2^15 ~ 2^15-1 (-32768 ~ 32767)
 // int         32bits    -2^31 ~ 2^31-1 (-2147483648 ~ 2147483647)
@@ -31,7 +33,61 @@ public class Sample_A
     private void Sample()
     {
 
+        int[] progresses =
+        { 95, 90, 99, 99, 80, 99 };
+        int[] speeds =
+        { 1, 1, 1, 1, 1, 1 };
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        boolean[] clear = new boolean[progresses.length];
+
         // ! ---------------------------------------------------
+
+        while (!clear[clear.length - 1])
+        {
+            int temp = 0;
+            boolean work = false;
+
+            loop: for (int x = 0; x < progresses.length; x++)
+            {
+                if (progresses[x] == 100 && !clear[x])
+                {
+                    for (int y = 0; y <= x; y++)
+                    {
+                        if (progresses[y] != 100)
+                        {
+                            break loop;
+                        }
+                    }
+                    clear[x] = true;
+                    ++temp;
+                    work = true;
+                    continue;
+                }
+            }
+
+            for (int x = 0; x < progresses.length; x++)
+            {
+                if (progresses[x] != 100)
+                {
+                    progresses[x] += speeds[x];
+                    if (progresses[x] > 100)
+                    {
+                        progresses[x] = 100;
+                    }
+                }
+            }
+
+            if (work)
+            {
+                result.add(temp);
+            }
+
+        }
+
+        result.forEach(System.out::println);
+        // return result.stream().mapToInt(a -> a).toArray();
 
     }
 }
