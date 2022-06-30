@@ -1,0 +1,201 @@
+body {
+  font-size: 13px;
+  width: auto;
+}
+header {
+  border-bottom-color: rgb(92, 96, 98);
+  width: 100%;
+  height: 120px;
+}
+header .login_area {
+  background-color: rgb(248, 248, 248);
+  font-size: 10px;
+  padding: 15px 0;
+}
+.wrap_comn {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.wrap_comn:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.top_left {
+  float: left;
+}
+
+.top_right {
+  float: right;
+}
+
+ul::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+header .login_area li {
+  float: left;
+  margin-right: 30px;
+}
+
+header .login_area li a {
+  color: rgb(101, 101, 101);
+}
+
+a {
+  font-size: 13px;
+}
+
+header .logo {
+  float: left;
+  background-image: url(/Study/Web/Produce_Project/IMG/logo.png);
+  background-repeat: no-repeat;
+  width: 114px;
+  height: 38px;
+  display: block;
+}
+nav {
+  float: inherit;
+}
+
+header .nav_area nav {
+  float: right;
+}
+
+header .nav_area li {
+  margin-right: 40px;
+  padding: 5px 0 20px 0;
+  float: left;
+}
+
+header .nav_area li:hover {
+  border-bottom: 4px solid rgb(0, 73, 33);
+  padding-bottom: 15px;
+}
+
+header .nav_area .nav_sub {
+  display: none;
+  background-color: rgb(247, 247, 247);
+  position: absolute;
+  z-index: 9999;
+  border-bottom: 1px solid rgb(183, 192, 189);
+  left: 0;
+  width: 100%;
+  padding: 0 0 45px 0;
+  margin-top: 20px;
+}
+
+nav dl {
+  margin-right: 41px;
+}
+
+header .nav_area .nav_sub dt {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+  padding-right: 20px;
+}
+header .nav_area a {
+  color: rgb(248, 243, 236);
+}
+header .nav_area .nav_sub a:hover {
+  color: rgb(0, 73, 33);
+  font-weight: 500;
+}
+
+header .nav_area .nav_sub.current {
+  display: block;
+}
+header .nav_area .nav_sub dl {
+  float: left;
+  min-height: 110px;
+  margin-top: 45px;
+  background-repeat: no-repeat;
+  background-position: right 40px;
+}
+
+header .nav_area .nav_sub .nav0101 {
+  background-image: url(/Study/Web/Produce_Project/IMG/gnb_bg0101.png);
+}
+
+header .nav_area .nav_sub dd a {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: rgb(125, 125, 125);
+  font-weight: normal;
+  width: 120px;
+  display: block;
+}
+
+header .nav_area .nav_sub dt {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+  padding-right: 70px;
+}
+
+header .nav_area {
+  font-size: 16px;
+  padding: 15px 0 0 0;
+}
+
+header .nav_area a {
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+}
+
+header .nav_area .nav_sub.active {
+  display: block;
+}
+
+/*  header ---------------------------------------------------------------------- */
+
+main .bn_area {
+  background-image: url(/Study/Web/Produce_Project/IMG/다운로드.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 155px;
+  background-color: initial;
+  padding: 15px 0 0 70px;
+}
+
+.bn_area .title_sub {
+  font-size: 18px;
+}
+
+.bn_area .title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.bn_area .title_desc {
+  font-size: 14px;
+  width: 440px;
+}
+
+.content_area {
+  background-color: #59c4b4;
+  background-position: center center;
+  width: 1920px;
+  height: 1000px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* main ---------------------------------------*/
+
+/*  import ------------------------------------------------ */

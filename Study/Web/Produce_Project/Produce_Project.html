@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>건강한 소비 생활을 위해, 한국소비자유통물가 조사원</title>
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="login_area">
+        <div class="wrap_comn">
+          <div class="top_left">
+            <ul>
+              <li>
+                <a
+                  href="https://www.atfis.or.kr/fip/front/index.do"
+                  target="_blank"
+                  >The외식</a
+                >
+              </li>
+              <li>
+                <a href="http://www.foodbiz.or.kr" target="_blank"
+                  >농수산식품기업지원센터</a
+                >
+              </li>
+              <li><a href="http://www.at.or.kr" target="_blank">aT메인</a></li>
+            </ul>
+          </div>
+          <div class="top_right">
+            <ul>
+              <li>
+                <a class="login" onclick="Login_Popup()" href="">로그인</a>
+              </li>
+              <li><a href="">마이페이지</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="smart_wrap"></section>
+      <section class="nav_area">
+        <div class="wrap_comn">
+          <a href="" class="logo"></a>
+          <nav>
+            <ul class="tabs">
+              <li class="tablinks" data-tabs="nav_01">
+                <a>가격정보</a>
+                <div id="nav_01" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0101">
+                      <dt>
+                        도매가격
+                        <span style="font-size: 12px">
+                          (중도매인 판매가격)</span
+                        >
+                      </dt>
+                      <dd><a href="">품목별</a></dd>
+                      <dd><a href="">기간별</a></dd>
+                      <dd><a href="">부류별</a></dd>
+                    </dl>
+                    <dl class="nav_0102">
+                      <dt>소매가격</dt>
+                      <dd><a href="">품목별</a></dd>
+                      <dd><a href="">기간별</a></dd>
+                      <dd><a href="">부류별</a></dd>
+                      <dd><a href="">시장별</a></dd>
+                    </dl>
+                    <dl class="nav_0103">
+                      <dt>도-소매가격</dt>
+                      <dd><a href="">품목별</a></dd>
+                      <dd><a href="">기간별</a></dd>
+                      <dd><a href="">부류별</a></dd>
+                    </dl>
+                    <dl class="nav_0104">
+                      <dt>가격정보 조사요령</dt>
+                      <dd><a href="">조사개요</a></dd>
+                      <dd><a href="">조사 및 분산체계</a></dd>
+                      <dd><a href="">조사대상 품목</a></dd>
+                      <dd><a href="">조사주기 및 지역</a></dd>
+                      <dd><a href="">조사방법</a></dd>
+                      <dd><a href="">조사기준</a></dd>
+                    </dl>
+                    <dl class="nav_0105">
+                      <dt>부가정보</dt>
+                      <dd><a href="">주요 농산물 일일도매가격</a></dd>
+                      <dd><a href="">ssm-sm 소매가격</a></dd>
+                      <dd><a href="">가공식품 소매가격</a></dd>
+                      <dd><a href="">외식 프랜차이즈 가격 동향</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_02">
+                <a href="">동향/전망</a>
+                <div id="nav_02" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0201">
+                      <dt>거래동향</dt>
+                      <dd><a href="">일일동향</a></dd>
+                      <dd><a href="">주간동향</a></dd>
+                      <dd><a href="">월간동향</a></dd>
+                    </dl>
+                    <dl class="nav_0202">
+                      <dt><a href="">제철농산물</a></dt>
+                    </dl>
+                    <dl class="nav_0203">
+                      <dt><a href="">성수기정보</a></dt>
+                    </dl>
+                    <dl class="nav_0204">
+                      <dt>농산물 해외수입정보</dt>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_03">
+                <a href="">식재료 아카이브</a>
+                <div id="nav_03" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0301">
+                      <dt><a href="">식재료 아카이브</a></dt>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_04">
+                <a href="">알뜰장보기</a>
+                <div id="nav_04" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0401">
+                      <dt>
+                        <a href="">주간알뜰장보기</a>
+                      </dt>
+                    </dl>
+                    <dl class="nav_0402">
+                      <dt><a href="">업종별 관심품목</a></dt>
+                    </dl>
+                    <dl class="nav_0403">
+                      <dt><a href="">물가정보 방송인터뷰</a></dt>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_05">
+                <a href="">유통실태</a>
+                <div id="nav_05" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0501">
+                      <dt>국내유통실태</dt>
+                      <dd><a href="">연도별 유통비용</a></dd>
+                      <dd><a href="">품목별 유통비용</a></dd>
+                      <dd><a href="">종합분석</a></dd>
+                    </dl>
+                    <dl class="nav_0502">
+                      <dt><a href="">해외유통실태</a></dt>
+                    </dl>
+                    <dl class="nav_0503">
+                      <dt><a href="">소비실태</a></dt>
+                    </dl>
+                    <dl class="nav_0504">
+                      <dt>농산물 표준규격</dt>
+                      <dd><a href="">표준규격출하율</a></dd>
+                      <dd><a href="">포장화율</a></dd>
+                    </dl>
+                    <dl class="nav_0505">
+                      <dt>실태조사요령</dt>
+                      <dd><a href="">유통실태조사</a></dd>
+                      <dd><a href="">물류비산정</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_06">
+                <a href="">친환경농산물 유통정보</a>
+                <div id="nav_06" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0601">
+                      <dt>친환경농산물 유통정보</dt>
+                      <dd><a href="">제도개요</a></dd>
+                    </dl>
+                    <dl class="nav_0602">
+                      <dt><a href="">소매가격정보</a></dt>
+                      <dd><a href="">조사개요</a></dd>
+                      <dd><a href="">판매장유형별</a></dd>
+                      <dd><a href="">품목별</a></dd>
+                      <dd><a href="">기간별</a></dd>
+                      <dd><a href="">부류별</a></dd>
+                      <dd><a href="">과거 가격자료</a></dd>
+                    </dl>
+                    <dl class="nav_0603">
+                      <dt><a href="">조사보고서</a></dt>
+                      <dd><a href="">친환경농산물 유통실태조사</a></dd>
+                      <dd><a href="">친환경농업 소득조사</a></dd>
+                      <dd><a href="">학교급식 현황조사</a></dd>
+                      <dd><a href="">판매장 현황조사</a></dd>
+                      <dd><a href="">소비자 태도조사</a></dd>
+                      <dd><a href="">해외유통실태조사</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_07">
+                <a href="">자료실</a>
+                <div id="nav_07" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0701">
+                      <dt><a href="">일반자료실</a></dt>
+                    </dl>
+                    <dl class="nav_0702">
+                      <dt><a href="">유통뉴스</a></dt>
+                    </dl>
+                    <dl class="nav_0703">
+                      <dt><a href="">소비자상식</a></dt>
+                    </dl>
+                    <dl class="nav_0704">
+                      <dt>Open-API</dt>
+                      <dd><a href="">Open-API 이용안내</a></dd>
+                      <dd><a href="">Open-API 이용신청</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="tablinks" data-tabs="nav_08">
+                <a href="">고객센터</a>
+                <div id="nav_08" class="nav_sub">
+                  <div class="wrap_comn">
+                    <dl class="nav_0801">
+                      <dt><a href="">KAMIS 소개</a></dt>
+                    </dl>
+                    <dl class="nav_0802">
+                      <dt><a href="">공지사항</a></dt>
+                    </dl>
+                    <dl class="nav_0803">
+                      <dt><a href="">묻고답하기</a></dt>
+                    </dl>
+                    <dl class="nav_0804">
+                      <dt><a href="">자주묻는 질문</a></dt>
+                    </dl>
+                    <dl class="nav_0805">
+                      <dt><a href="">설문참여</a></dt>
+                    </dl>
+                    <dl class="nav_0806">
+                      <dt><a href="">찾아오시는 길</a></dt>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="bn_area">
+        <div class="wrap_comn">
+          <span class="title_sub">농수산물 유통정보의 중심</span>
+          <b class="title">KAMIS 농산물 유통정보</b>
+          <p class="title_desc">
+            농축수산물의 유통과 관련된 다양한 정보를 신속, 편리하게 제공하여
+            정보수여자의 유통에 관한 이해증진과 원활한 정보 이용을 지원합니다.
+          </p>
+        </div>
+      </section>
+      <div class="content_area">
+        <div class="wrap_comn"></div>
+      </div>
+    </main>
+    <script src="JS/system.js"></script>
+    <script src="JS/img_control.js"></script>
+  </body>
+</html>
