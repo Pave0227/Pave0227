@@ -1,0 +1,356 @@
+@import "compass";
+:root {
+	--color: #F1DF40;
+	--color-b: #625AEE;
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	background-color: #384052;
+	height: 100%;
+	@include flexbox();
+	@include align-items(center);
+	@include justify-content(center);
+	font-family: 'Helvetica Neue', Arial;
+	font-size: 18px;
+	letter-spacing: 3.3px;
+	font-weight: bold;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+	@include flexbox();
+  flex-wrap: wrap;
+}
+
+.box {
+	position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20%;
+  padding-bottom: 20%;
+  margin: 0 2.5%;
+	background-color: var(--color-b);
+}
+
+.box--1 {
+	span {
+		font-size: 1em;
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		@include animation(marquee 4s linear infinite);
+		&:nth-child(1) {
+			position: absolute;
+			left: -100%;
+			@include animation(marquee 4s 2s linear infinite);
+		}
+	}
+	.line {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 34px;
+		overflow: hidden;
+		white-space: nowrap;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		background-color: var(--color);
+	}
+}
+
+@keyframes marquee {
+	0% {
+		left: 0;
+		@include transform(translateX(-100%));
+	}
+	100% {
+		left: 0;
+		@include transform(translateX(100%));
+	}
+}
+
+.box--2 {
+	overflow: hidden;
+	.text {
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+		right: 30px;
+		height: 34px;
+		font-size: 1em;
+		background-color: var(--color);
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+	}
+	.border {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		outline: 30px solid #000;
+		outline-offset: -30px;
+	}
+	span {
+		position: absolute;
+		bottom: -100%;
+		width: 30px;
+		height: 30px;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		font-size: 0.8em;
+		letter-spacing: 2px;
+		color: var(--color);
+		@include animation(border 8s linear infinite);
+	}
+}
+
+$box: 8;
+@for $i from 1 through $box {
+	$delay: $i / $box * 8;
+	.border span:nth-child(#{$i}) {
+		animation-delay: $delay+s;
+	}
+}
+
+@keyframes border {
+	0% {
+		left: 0px;
+		bottom: 0px;
+		right: auto;
+		top: auto;
+    @include transform(rotate(0deg));
+	}
+	0.001% {
+		left: auto;
+		bottom: 0px;
+		right: 80%;
+		top: auto;
+	}
+	25% {
+		left: auto;
+		bottom: 0px;
+		right: 0;
+		top: auto;
+    @include transform(rotate(0deg));
+	}
+	25.001% {
+		left: auto;
+		bottom: auto;
+		right: 0;
+		top: 80%;
+    @include transform(rotate(90deg));
+	}
+	50% {
+		left: auto;
+		bottom: auto;
+		right: 0;
+		top: 0;
+    @include transform(rotate(90deg));
+	}
+	50.001% {
+		left: 80%;
+		bottom: auto;
+		right: auto;
+		top: 0;
+    @include transform(rotate(0deg));
+	}
+	75% {
+		left: 0px;
+		bottom: auto;
+		right: auto;
+		top: auto;
+    @include transform(rotate(0deg));
+	}
+	75.001% {
+		left: 0px;
+		bottom: 80%;
+		right: auto;
+		top: auto;
+    @include transform(rotate(-90deg));
+	}
+	99.881% {
+		left: 0px;
+		bottom: 0px;
+		right: auto;
+		top: auto;
+    @include transform(rotate(-90deg));
+	}
+	100% {
+		left: 0px;
+		bottom: 0px;
+		right: auto;
+		top: auto;
+    @include transform(rotate(0deg));
+	}
+}
+
+.box--3 {
+	span {
+		height: 36px;
+		font-size: 1em;
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		@include animation(marquee-top 2s linear infinite);
+		&:nth-child(1) {
+			position: absolute;
+			left: -100%;
+			@include animation(marquee-top 2s 1s linear infinite);
+		}
+	}
+	.line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 34px;
+		overflow: hidden;
+		white-space: nowrap;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		background-color: #000;
+		color: var(--color);
+	}
+}
+
+@keyframes marquee-top {
+	0% {
+		left: 0;
+		@include transform(translateY(-100%));
+	}
+	100% {
+		left: 0;
+		@include transform(translateY(100%));
+	}
+}
+
+.box--4 {
+	.btn {
+		display: block;
+		position: absolute;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		bottom: -45px;
+		right: -45px;
+		background-color: #000;
+	}
+	.box_rotate {
+		overflow: hidden;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: "";
+			display: block;
+			border-radius: 50%;
+			width: 170px;
+			height: 170px;
+			position: absolute;
+			bottom: -80px;
+			right: -80px;
+      box-sizing: border-box;
+			border: 30px solid var(--color);
+		}
+	}
+	svg {
+		width: 494px;
+    height: auto;
+    position: absolute;
+    bottom: -242px;
+    right: -244px;
+		@include animation(rotate 8s linear infinite);
+	}
+	text {
+		font-size: 10px;
+		letter-spacing: 1.15px;
+		font-weight: bold;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		@include transform(rotate(0deg));
+	}
+	100% {
+		@include transform(rotate(360deg));
+	}
+}
+
+@media (max-width: 1200px) {
+ body {
+   font-size: 16px;
+  }
+}
+
+@media (max-width: 1150px) {
+ body {
+   font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+   display: block;
+  }
+  .container {
+	  @include justify-content(center);
+  }
+  .box {
+    height: 200px;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+  }
+  .container {
+    padding: 0 15px;
+	  @include justify-content(center);
+  }
+  .box {
+    height: 200px;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+  }
+}

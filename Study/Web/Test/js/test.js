@@ -1,26 +1,18 @@
-//선택 정렬
+//Recursive(재귀)
 
-function swap(arr, a, b) {
-  let temp = arr[a];
-  arr[a] = arr[b];
-  arr[b] = temp;
+function factorial(n) {
+  let result = 1;
+
+  for (let i = n; i >= 1; i--) {
+    result *= i;
+  }
+
+  return result;
 }
 
-function Select_Sort(arr) {
-  let min;
-
-  for (let i = 0; i < arr.length; i++) {
-    min = i;
-
-    for (let k = i + 1; k < arr.length; k++) {
-      if (arr[k] < arr[min]) {
-        min = k;
-      }
-    }
-    //현재 위치가 최소 항목 위치가 아니라면 항목 swap
-    if (i != min) {
-      swap(arr, i, min);
-    }
+function Factorial_2(n) {
+  if (n == 1) {
+    return 1;
   }
-  return arr;
+  return n * Factorial_2(n - 1);
 }
