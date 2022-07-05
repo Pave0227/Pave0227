@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>건강한 소비 생활을 위해, 한국소비자유통물가 조사원</title>
-    <link rel="stylesheet" href="CSS/reset.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -264,80 +269,73 @@
         </div>
       </section>
       <section class="content_area">
-        <div id="background"></div>
         <div class="wrap_comn">
-          <h1 class="main_h1">금주 시세 동향 <span>22.07.03~22.07.09</span></h1>
-          <div class="container up">
-            <section class="box box--1">
-              <img src="IMG/깻잎jpg.jpg" alt="" />
-              <div class="line">
-                <span id="price_up">24.4% 상승 ↗</span
-                ><span>출하지 우천으로 인한 품위 저하</span>
-              </div>
-               <div class="line_2" id="price_up">
-                <span>깻잎 (1,530원) ⬆</span> </span>
-               </div>
-              </section>         
-              <section class="box box--1">
-                <img src="IMG/새송이버섯.jpg" alt="" />
-                <div class="line">
-                  <span id="price_up">12.2% 상승 ↗</span
-                  ><span>출하지 우천으로 인한 품위 저하</span>
-                </div>
-                 <div class="line_2" id="price_up">
-                  <span>새송이버섯 1개 (830원) ⬆</span> </span>
-                 </div>
-                </section>         
-          </div>
+          <article class="w_half fl_l table_comn">
+            <div class="tit_area">
+              <h2 class="tit">
+                도매 가격 <span class="tit_desc">(중도매인 판매가격)</span>
+                <span class="right_span">상품,원</span>
+              </h2>
+            </div>
+            <div class="tap_list">
+              <ul class="tab uifix">
+                <li data-tabs="tab_tb0101" class="current">
+                  <h3 class="tab_tit">식량작물</h3>
+                </li>
 
-          <div class="container down">
-            <section class="box box--1">
-              <img src="IMG/애호박.jpg" alt="" />
-              <div class="line">
-                <span id="price_down">15.0% 하락 ↘ </span
-                ><span>경남,제주등 출하량 증가</span>
-              </div>
-               <div class="line_2" id="price_down">
-                <span>애호박 1개 (1,840원) ⬇</span> </span>
-               </div>
-              </section>  
-              <section class="box box--1">
-                <img src="IMG/양배추.jpg" alt="" />
-                <div class="line">
-                  <span id="price_down">5.6% 하락 ↘ </span
-                  ><span> 양배추 햇품 물량이 꾸준하여 </span>
-                </div>
-                 <div class="line_2" id="price_down">
-                  <span>양배추 1포기 (3,654원) ⬇</span> </span>
-                 </div>
-                </section>  
-          </div>
+                <li data-tabs="tab_tb0102" class>
+                  <h3 class="tab_tit">채소류</h3>
+                </li>
+                <li data-tabs="tab_tb0103" class>
+                  <h3 class="tab_tit">특용작물</h3>
+                </li>
+                <li data-tabs="tab_tb0104" class>
+                  <h3 class="tab_tit">과일류</h3>
+                </li>
+                <li data-tabs="tab_tb0105" class>
+                  <h3 class="tab_tit">수산물</h3>
+                </li>
+              </ul>
+            </div>
 
-          <div class="container same">
-            <section class="box box--1">
-              <img src="IMG/옥수수.jpg" alt="" />
-              <div class="line">
-                <span id="price_same">보합 ↔</span
-                ><span>기온 상승으로 작황 부진</span>
-              </div>
-               <div class="line_2" id="price_same">
-                <span>옥수수 1개(1,230원) ⬆</span> </span>
-               </div>
-              </section>      
-              <section class="box box--1">
-                <img src="IMG/호박.jpg" alt="" />
-                <div class="line">
-                  <span id="price_same">보합 ↔</span
-                  ><span>기온 상승으로 작황 부진</span>
-                </div>
-                 <div class="line_2" id="price_same">
-                  <span>호박 1개 (5,630원) ⬆</span> </span>
-                 </div>
-                </section>            
-          </div>
+            <div id="tab_tb0101" class="tab_area current">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col">가격(당일)</th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    onclick="changeGraphWholesaleView('1','2022-07-04','쌀/일반계','20kg');"
+                    id="pointer"
+                  >
+                    <td style="text-align: left; padding-left: 10px">
+                      쌀/일반계
+                    </td>
+                    <td>20kg</td>
+                    <td>47,580</td>
+                    <td></td>
+                    <td>47,650</td>
+                    <td>48,120</td>
+                    <td>58,980</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
         </div>
       </section>
     </main>
-    <script src="JS/system.js"></script>
+    <script src="/JS/system.js"></script>
   </body>
 </html>
