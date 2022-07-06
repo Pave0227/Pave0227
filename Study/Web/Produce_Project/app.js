@@ -1,13 +1,16 @@
 var express = require("express");
-
-// express 는 함수이므로, 반환값을 변수에 저장한다.
+var cors = require("cors");
 var app = express();
 
-var http = require("http");
+// CORS 설정
+app.use(cors());
 
-// 3000 포트로 서버 오픈
-app.listen(3000, function () {
-  console.log("start! express server on port 3000");
+app.get("/products/:id", function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
+
+app.listen(80, function () {
+  console.log("CORS-enabled web server listening on port 80");
 });
 
 app.use(express.static(__dirname));

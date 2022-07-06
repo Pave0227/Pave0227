@@ -279,20 +279,20 @@
             </div>
             <div class="tap_list">
               <ul class="tab uifix">
-                <li data-tabs="tab_tb0101" class="current">
+                <li data-tabs="tab_tb0101" class="tab_price current">
                   <h3 class="tab_tit">식량작물</h3>
                 </li>
 
-                <li data-tabs="tab_tb0102" class>
+                <li data-tabs="tab_tb0102" class="tab_price">
                   <h3 class="tab_tit">채소류</h3>
                 </li>
-                <li data-tabs="tab_tb0103" class>
+                <li data-tabs="tab_tb0103" class="tab_price">
                   <h3 class="tab_tit">특용작물</h3>
                 </li>
-                <li data-tabs="tab_tb0104" class>
+                <li data-tabs="tab_tb0104" class="tab_price">
                   <h3 class="tab_tit">과일류</h3>
                 </li>
-                <li data-tabs="tab_tb0105" class>
+                <li data-tabs="tab_tb0105" class="tab_price">
                   <h3 class="tab_tit">수산물</h3>
                 </li>
               </ul>
@@ -307,29 +307,214 @@
                   <tr>
                     <th scope="col">품목</th>
                     <th scope="col">단위</th>
-                    <th scope="col">가격(당일)</th>
+                    <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
                     <th scope="col">1개월전</th>
                     <th scope="col">1년전</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr
-                    onclick="changeGraphWholesaleView('1','2022-07-04','쌀/일반계','20kg');"
-                    id="pointer"
-                  >
-                    <td style="text-align: left; padding-left: 10px">
-                      쌀/일반계
-                    </td>
-                    <td>20kg</td>
-                    <td>47,580</td>
-                    <td></td>
-                    <td>47,650</td>
-                    <td>48,120</td>
-                    <td>58,980</td>
+                <tbody id="retail"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0102" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
                   </tr>
-                </tbody>
+                </thead>
+                <tbody id="retail"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0103" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="retail"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0104" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="retail"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0105" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="retail"></tbody>
+              </table>
+            </div>
+          </article>
+          <article class="w_half fl_r table_comn">
+            <div class="tit_area">
+              <h2 class="tit">
+                소매 가격
+                <span class="right_span">상품,원</span>
+              </h2>
+            </div>
+            <div class="tap_list">
+              <ul class="tab uifix">
+                <li data-tabs="tab_tb0201" class="tab_price current">
+                  <h3 class="tab_tit">식량작물</h3>
+                </li>
+
+                <li data-tabs="tab_tb0202" class="tab_price">
+                  <h3 class="tab_tit">채소류</h3>
+                </li>
+                <li data-tabs="tab_tb0203" class="tab_price">
+                  <h3 class="tab_tit">특용작물</h3>
+                </li>
+                <li data-tabs="tab_tb0204" class="tab_price">
+                  <h3 class="tab_tit">과일류</h3>
+                </li>
+                <li data-tabs="tab_tb0205" class="tab_price">
+                  <h3 class="tab_tit">수산물</h3>
+                </li>
+              </ul>
+            </div>
+
+            <div id="tab_tb0201" class="tab_area current">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="whole"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0202" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="whole"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0203" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="whole"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0204" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="whole"></tbody>
+              </table>
+            </div>
+            <div id="tab_tb0205" class="tab_area">
+              <table class="type_default scrolltbody">
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">품목</th>
+                    <th scope="col">단위</th>
+                    <th scope="col"><span class="time_set"></span></th>
+                    <th scope="col">등락률</th>
+                    <th scope="col">전일</th>
+                    <th scope="col">1개월전</th>
+                    <th scope="col">1년전</th>
+                  </tr>
+                </thead>
+                <tbody id="whole"></tbody>
               </table>
             </div>
           </article>

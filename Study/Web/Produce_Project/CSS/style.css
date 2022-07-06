@@ -109,7 +109,17 @@ header .nav_area .nav_sub a:hover {
   color: rgb(0, 73, 33);
   font-weight: 500;
 }
+.tab_area {
+  display: none;
+}
 
+.tab_area2 {
+  display: none;
+}
+
+.tab_area2.current {
+  display: block;
+}
 header .nav_area .nav_sub.current {
   display: block;
 }
@@ -183,13 +193,7 @@ main .bn_area {
 
 .content_area {
   background-position: center center;
-  width: 1980px;
-  height: 100vh;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* main ---------------------------------------*/
@@ -220,7 +224,9 @@ main .bn_area {
 }
 
 .tab_tit {
-  color: white;
+  color: rgb(14, 90, 84);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .tab li.current {
@@ -313,12 +319,8 @@ col {
   padding-right: 7px;
 }
 
-tr#pointer {
-  cursor: pointer;
-}
-
 .type_default tbody td {
-  color: rgb(198, 188, 174);
+  color: rgb(128, 128, 128);
   text-align: right;
 }
 
