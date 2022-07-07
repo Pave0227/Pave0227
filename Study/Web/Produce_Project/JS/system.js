@@ -27,18 +27,26 @@ tabLinks.forEach(function (el) {
 });
 
 $(".tab_price").click(function (el) {
+  let temp_btn = document.querySelectorAll(".tab_price");
+  let temp_data = document.querySelectorAll(".tab_area");
   let i = $(".tab_price").index(this);
+
+  console.log(i);
 
   if (i <= 4) {
     for (let x = 0; x <= 4; x++) {
-      $(".tab_price").eq(x).classList.remove("current");
+      temp_btn.item(x).classList.remove("current");
+      temp_data.item(x).classList.remove("current");
     }
-    $(".tab_price").eq(i).classList.add("current");
+    temp_btn.item(i).classList.add("current");
+    temp_data.item(i).classList.add("current");
   } else {
     for (let x = 5; x <= 9; x++) {
-      $(".tab_price").eq(x).classList.remove("current");
+      temp_btn.item(x).classList.remove("current");
+      temp_data.item(x).classList.remove("current");
     }
-    $(".tab_price").eq(i).classList.add("current");
+    temp_btn.item(i).classList.add("current");
+    temp_data.item(i).classList.add("current");
   }
 });
 
@@ -100,66 +108,67 @@ function Whole_Support() {
       today_user +
       user_key;
 
+    // 이벤트 메서드
+
+    //Ajax GET Method TEST
     $.ajax({
-      url: test,
-      type: "get",
-      dataType: "jsonp",
-    })
+      url: "/api/get",
+      dataType: "json",
+      type: "GET",
+      data: { data: API_URL_Whole },
+      success: function (api) {
+        if (api) {
+          const parent_tag = document.querySelectorAll("#whole");
 
-      .done(function (data) {
-        const retail = document.querySelectorAll("#retail");
+          for (let x = 0; x < parent_tag.length; x++) {
+            for (let i = 0; i < api.result.data.item.length; i++) {
+              let item = api.result.data.item[i];
+              let item_list = [
+                item.item_name, // 이름
+                item.kind_name, // 품질원산지
+                item.unit, // 단위
+                item.dpr1, // 금일
+                item.dpr2, // 전일
+                item.dpr5, // 1개월
+                item.dpr6, // 1년
+              ];
+              let element_tr = document.createElement("tr");
+              element_tr.style.cursor = "pointer";
+              let once = true;
+              for (let y = 1; y < item_list.length; y++) {
+                let element_td = document.createElement("td");
 
-        for (let x = 0; x < retail.length; x++) {
-          for (let i = 0; i < data.data.item.length; i++) {
-            let item = data.data.item[i];
-            let item_list = [
-              item.item_name, // 이름
-              item.kind_name, // 품질원산지
-              item.unit, // 단위
-              item.dpr1, // 금일
-              item.dpr2, // 전일
-              item.dpr5, // 1개월
-              item.dpr6, // 1년
-            ];
-            let element_parent = document.createElement("tr");
-            element_parent.style.cursor = "pointer";
-            let once = true;
-            for (let y = 1; y < item_list.length; y++) {
-              let element = document.createElement("td");
-
-              //이름 품질 원산지 혼합
-              if (y == 1) {
-                element.innerText = item_list[0] + "/" + item_list[1];
-                element.style.textAlign = "left";
-                element.style.paddingLeft = "10px";
+                //이름 품질 원산지 혼합
+                if (y == 1) {
+                  element_td.innerText = item_list[0] + "/" + item_list[1];
+                  element_td.style.textAlign = "left";
+                  element_td.style.paddingLeft = "10px";
+                }
+                // 등가율
+                else if (y == 2) {
+                  element_td.style.textAlign = "center";
+                  element_td.innerText = item_list[y];
+                } else if (y == 4 && once) {
+                  element_td.innerText =
+                    Math.round(
+                      ((parseInt(item_list[3]) - parseInt(item_list[4])) /
+                        parseInt(item_list[4])) *
+                        100
+                    ) + "%";
+                  once = false;
+                  element_td.style.textAlign = "center";
+                  y = 3;
+                } else {
+                  element_td.innerText = item_list[y];
+                }
+                element_tr.append(element_td);
+                parent_tag.item(p).append(element_tr);
               }
-              // 등가율
-              else if (y == 2) {
-                element.style.textAlign = "center";
-                element.innerText = item_list[y];
-              } else if (y == 4 && once) {
-                element.innerText =
-                  Math.round(
-                    ((parseInt(item_list[3]) - parseInt(item_list[4])) /
-                      parseInt(item_list[4])) *
-                      100
-                  ) + "%";
-                once = false;
-                element.style.textAlign = "center";
-                y = 3;
-              } else {
-                element.innerText = item_list[y];
-              }
-              element_parent.append(element);
-              retail.item(p).append(element_parent);
             }
           }
         }
-      })
-
-      .fail(function (xhr, status, errorThrow) {
-        console.log("실패");
-      });
+      },
+    });
   }
 }
 
@@ -173,66 +182,67 @@ function Retail_Support() {
       today_user +
       user_key;
 
+    // 이벤트 메서드
+
+    //Ajax GET Method TEST
     $.ajax({
-      url: API_URL_Whole,
-      type: "get",
+      url: "/api/get",
       dataType: "json",
-    })
+      type: "GET",
+      data: { data: API_URL_Whole },
+      success: function (api) {
+        if (api) {
+          const parent_tag = document.querySelectorAll("#retail");
 
-      .done(function (data) {
-        const retail = document.querySelectorAll("#whole");
+          for (let x = 0; x < parent_tag.length; x++) {
+            for (let i = 0; i < api.result.data.item.length; i++) {
+              let item = api.result.data.item[i];
+              let item_list = [
+                item.item_name, // 이름
+                item.kind_name, // 품질원산지
+                item.unit, // 단위
+                item.dpr1, // 금일
+                item.dpr2, // 전일
+                item.dpr5, // 1개월
+                item.dpr6, // 1년
+              ];
+              let element_tr = document.createElement("tr");
+              element_tr.style.cursor = "pointer";
+              let once = true;
+              for (let y = 1; y < item_list.length; y++) {
+                let element_td = document.createElement("td");
 
-        for (let x = 0; x < retail.length; x++) {
-          for (let i = 0; i < data.data.item.length; i++) {
-            let item = data.data.item[i];
-            let item_list = [
-              item.item_name, // 이름
-              item.kind_name, // 품질원산지
-              item.unit, // 단위
-              item.dpr1, // 금일
-              item.dpr2, // 전일
-              item.dpr5, // 1개월
-              item.dpr6, // 1년
-            ];
-            let element_parent = document.createElement("tr");
-            element_parent.style.cursor = "pointer";
-            let once = true;
-            for (let y = 1; y < item_list.length; y++) {
-              let element = document.createElement("td");
-
-              //이름 품질 원산지 혼합
-              if (y == 1) {
-                element.innerText = item_list[0] + "/" + item_list[1];
-                element.style.textAlign = "left";
-                element.style.paddingLeft = "10px";
+                //이름 품질 원산지 혼합
+                if (y == 1) {
+                  element_td.innerText = item_list[0] + "/" + item_list[1];
+                  element_td.style.textAlign = "left";
+                  element_td.style.paddingLeft = "10px";
+                }
+                // 등가율
+                else if (y == 2) {
+                  element_td.style.textAlign = "center";
+                  element_td.innerText = item_list[y];
+                } else if (y == 4 && once) {
+                  element_td.innerText =
+                    Math.round(
+                      ((parseInt(item_list[3]) - parseInt(item_list[4])) /
+                        parseInt(item_list[4])) *
+                        100
+                    ) + "%";
+                  once = false;
+                  element_td.style.textAlign = "center";
+                  y = 3;
+                } else {
+                  element_td.innerText = item_list[y];
+                }
+                element_tr.append(element_td);
+                parent_tag.item(p).append(element_tr);
               }
-              // 등가율
-              else if (y == 2) {
-                element.style.textAlign = "center";
-                element.innerText = item_list[y];
-              } else if (y == 4 && once) {
-                element.innerText =
-                  Math.round(
-                    ((parseInt(item_list[3]) - parseInt(item_list[4])) /
-                      parseInt(item_list[4])) *
-                      100
-                  ) + "%";
-                once = false;
-                element.style.textAlign = "center";
-                y = 3;
-              } else {
-                element.innerText = item_list[y];
-              }
-              element_parent.append(element);
-              retail.item(p).append(element_parent);
             }
           }
         }
-      })
-
-      .fail(function (xhr, status, errorThrow) {
-        console.log("실패");
-      });
+      },
+    });
   }
 }
 
@@ -247,3 +257,24 @@ function Time_Set() {
 Whole_Support();
 Retail_Support();
 Time_Set();
+
+//test line ================================
+
+$(document).ready(function () {
+  $("#retail").click(function () {
+    var get = "GET METHOD CALL";
+
+    //Ajax GET Method TEST
+    $.ajax({
+      url: "/api/get",
+      dataType: "json",
+      type: "GET",
+      data: { data: get },
+      success: function (api) {
+        if (api) {
+          console.log(api.result.data.item[0]);
+        }
+      },
+    });
+  });
+});

@@ -170,6 +170,7 @@ header .nav_area .nav_sub.active {
 main .bn_area {
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("/IMG/다운로드.svg");
   height: 155px;
   background-color: initial;
   padding: 15px 0 0 70px;
