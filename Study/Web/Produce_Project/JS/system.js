@@ -101,7 +101,7 @@ function Whole_Support() {
       user_key;
 
     $.ajax({
-      url: API_URL_Whole,
+      url: test,
       type: "get",
       dataType: "jsonp",
     })
