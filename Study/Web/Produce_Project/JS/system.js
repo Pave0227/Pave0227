@@ -151,9 +151,9 @@ function Whole_Support() {
                 } else if (y == 4 && once) {
                   element_td.innerText =
                     Math.round(
-                      ((parseInt(item_list[3]) - parseInt(item_list[4])) /
-                        parseInt(item_list[4])) *
-                        100
+                      (parseInt(item_list[3].replace(",", "")) -
+                        parseInt(item_list[4].replace(",", ""))) /
+                        (parseInt(item_list[4].replace(",", "")) * 100)
                     ) + "%";
                   once = false;
                   element_td.style.textAlign = "center";
@@ -171,6 +171,8 @@ function Whole_Support() {
     });
   }
 }
+
+console.log(parseInt("3,132".replace(",", "")));
 
 function Retail_Support() {
   const product_code = [100, 200, 300, 400, 600];
