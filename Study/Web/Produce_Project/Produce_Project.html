@@ -7,13 +7,72 @@
     <title>건강한 소비 생활을 위해, 한국소비자유통물가 조사원</title>
     <link rel="stylesheet" href="/CSS/reset.css" />
     <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/img_control.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:500"
+      rel="stylesheet"
+    />
+    <script>
+      !(function (e) {
+        "undefined" == typeof module
+          ? (this.charming = e)
+          : (module.exports = e);
+      })(function (e, n) {
+        "use strict";
+        n = n || {};
+        var t = n.tagName || "span",
+          o = null != n.classPrefix ? n.classPrefix : "char",
+          r = 1,
+          a = function (e) {
+            for (
+              var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1;
+              ++l < c;
+
+            ) {
+              var d = document.createElement(t);
+              o && ((d.className = o + r), r++),
+                d.appendChild(document.createTextNode(a[l])),
+                n.insertBefore(d, e);
+            }
+            n.removeChild(e);
+          };
+        return (
+          (function c(e) {
+            for (
+              var n = [].slice.call(e.childNodes), t = n.length, o = -1;
+              ++o < t;
+
+            )
+              c(n[o]);
+            e.nodeType === Node.TEXT_NODE && a(e);
+          })(e),
+          e
+        );
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
     <header>
       <section class="login_area">
         <div class="wrap_comn">
@@ -39,7 +98,8 @@
               <li>
                 <a class="login" onclick="Login_Popup()" href="">로그인</a>
               </li>
-              <li><a href="">마이페이지</a></li>
+              <li><a href="">회원가입</a></li>
+              <li><a href="">사이트맵</a></li>
             </ul>
           </div>
         </div>
@@ -47,11 +107,13 @@
       <section class="smart_wrap"></section>
       <section class="nav_area">
         <div class="wrap_comn">
-          <a href="" class="logo"></a>
-          <nav>
-            <ul class="tabs">
+          <a href="" class="logo">
+            <img src="IMG/logo.png" alt="" />
+          </a>
+          <nav class="tabs">
+            <ul>
               <li class="tablinks" data-tabs="nav_01">
-                <a>가격정보</a>
+                <a href="">가격정보</a>
                 <div id="nav_01" class="nav_sub">
                   <div class="wrap_comn">
                     <dl class="nav_0101">
@@ -87,7 +149,7 @@
                       <dd><a href="">조사방법</a></dd>
                       <dd><a href="">조사기준</a></dd>
                     </dl>
-                    <dl class="nav_0105">
+                    <dl class="nav_0105 last">
                       <dt>부가정보</dt>
                       <dd><a href="">주요 농산물 일일도매가격</a></dd>
                       <dd><a href="">ssm-sm 소매가격</a></dd>
@@ -193,7 +255,7 @@
                       <dd><a href="">부류별</a></dd>
                       <dd><a href="">과거 가격자료</a></dd>
                     </dl>
-                    <dl class="nav_0603">
+                    <dl class="nav_0603 last">
                       <dt><a href="">조사보고서</a></dt>
                       <dd><a href="">친환경농산물 유통실태조사</a></dd>
                       <dd><a href="">친환경농업 소득조사</a></dd>
@@ -218,7 +280,7 @@
                     <dl class="nav_0703">
                       <dt><a href="">소비자상식</a></dt>
                     </dl>
-                    <dl class="nav_0704">
+                    <dl class="nav_0704 last">
                       <dt>Open-API</dt>
                       <dd><a href="">Open-API 이용안내</a></dd>
                       <dd><a href="">Open-API 이용신청</a></dd>
@@ -693,25 +755,27 @@
                 <h2 class="tit">새로운 소식</h2>
               </div>
               <ul class="tab uifix">
-                <li data-tabs="csbg" class="current">
+                <li data-tabs="csbg" class="tab_news current">
                   <h3 class="tab_tit">소비자상식</h3>
                 </li>
-                <li data-tabs="distnews" class>
+                <li data-tabs="distnews" class="tab_news">
                   <h3 class="tab_tit">유통뉴스</h3>
                 </li>
-                <li data-tabs="peak" class>
+                <li data-tabs="peak" class="tab_news">
                   <h3 class="tab_tit">성수기정보</h3>
                 </li>
-                <li data-tabs="dataroom" class>
+                <li data-tabs="dataroom" class="tab_news">
                   <h3 class="tab_tit">자료실</h3>
                 </li>
               </ul>
-              <div id="csbg" class="tab_area uifix current">
+              <div id="csbg" class="tab_area_news uifix current">
                 <ul>
                   <li class="first uifix">
                     <div class="txt_area">
                       <span class="tit"
-                        ><a href=""
+                        ><a
+                          href=""
+                          title="[aTFIS 식품산업 트렌드픽] 식품의 개인화(국내편)"
                           >[aTFIS 식품산업 트렌드픽] 식품의 개인화(국내편)</a
                         ></span
                       >
@@ -720,17 +784,509 @@
                         개인화(국내편) 입니다. 1. '...
                       </p>
                     </div>
+                    <div class="fl_r">
+                      <span>07.01</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[aTFIS 식품시장 뉴스레터] 단백질 식품(체중관리용)</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">06.23</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[aTFIS 식품산업 트렌드픽(해외편)] 글로벌
+                          식품패키지</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">06.16</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">[aTFIS 식품산업 뉴스레터] 음료</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.27</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">[aTFIS 식품시장 커피] 커피</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">[aTFIS 식품산업 트렌드픽] 스낵과자</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
                   </li>
                 </ul>
               </div>
-              <div id="distnews" class="tab_area uifix current"></div>
-              <div id="peak" class="tab_area uifix current"></div>
-              <div id="dataroom" class="tab_area uifix current"></div>
+              <div id="distnews" class="tab_area_news uifix">
+                <ul>
+                  <li class="first uifix">
+                    <div class="txt_area">
+                      <span class="tit"
+                        ><a
+                          href=""
+                          title="[aTFIS 식품산업 트렌드픽] 식품의 개인화(국내편)"
+                          >[보도자료] 추석 1주 전, 성수품 구입비용 24만 4천
+                          ..</a
+                        ></span
+                      >
+                      <p class="tit_desc">
+                        한국농수산식품유통공사(aT, 사장 이병호)가 추석을 약
+                        일주일 앞두고 추석차례상 차림비용을 조사한 결과, 전...
+                      </p>
+                    </div>
+                    <div class="fl_r">
+                      <span>07.01</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[보도자료] 추석 2주 전, 성수품 구입비용 23만 9천원
+                          선</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">06.23</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[보도자료] 올해 추석 차례상 비용 23만 8천원선</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">06.16</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">알싸한 마늘로 환절기 건강챙기세요!</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.27</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >사과보다 비타민C 5배 많은 '대파'로 면역력
+                          높이세요!</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">[보도자료] 김장비용 안정세 지속</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                </ul>
+              </div>
+              <div id="peak" class="tab_area_news uifix">
+                <ul>
+                  <li class="first uifix">
+                    <div class="txt_area">
+                      <span class="tit"
+                        ><a
+                          href=""
+                          title="[aTFIS 식품산업 트렌드픽] 식품의 개인화(국내편)"
+                          >[2022년 설 3차 보도자료]설 일주일 전, 차례상 비용 ..
+                          ..</a
+                        ></span
+                      >
+                      <p class="tit_desc">
+                        [2022년 설 3차 보도자료]설 일주일 전, 차례상 비용 3주
+                        연속 안정세 * 자세한 내용은 첨부 파...
+                      </p>
+                    </div>
+                    <div class="fl_r">
+                      <span>07.01</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">[2021년 추석] 성수품 조사결과</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">06.23</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[2022년 설 2차 보도자료]설 성수품 구입비용, 26만5천원
+                          선으로 안정세
+                        </a>
+                      </span>
+                    </div>
+                    <div class="fl_r">06.16</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >[2022년 설 1차 보도자료]설 차례상 비용, 전년과 비슷한
+                          26만 4천원선
+                        </a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.27</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">설 성수품 3차 조사결과</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href="">설 성수품 2차 조사결과 및 구매적기</a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                </ul>
+              </div>
+              <div id="dataroom" class="tab_area_news uifix">
+                <ul>
+                  <li class="first uifix">
+                    <div class="txt_area">
+                      <span class="tit"
+                        ><a
+                          href=""
+                          title="[aTFIS 식품산업 트렌드픽] 식품의 개인화(국내편)"
+                          >2022년 aT국민참여혁신단 모집공고문 ..</a
+                        ></span
+                      >
+                      <p class="tit_desc"></p>
+                    </div>
+                    <div class="fl_r">
+                      <span>07.01</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >2022년 하반기 농식품마케팅대학 교육생 모집</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">06.23</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >제6회 FIS를 활용한 식품외식산업 대학생 논문경진대회
+                        </a>
+                      </span>
+                    </div>
+                    <div class="fl_r">06.16</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >2022년 푸드플랜의 이해(사이버강좌) 교육생 모집
+                        </a>
+                      </span>
+                    </div>
+                    <div class="fl_r">05.27</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >2022 농식품 빅데이터 플랫폼(KADX) 데이터 바우처
+                          수요기업 모집</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                  <li>
+                    <div class="txt_area">
+                      <span class="tit">
+                        <a href=""
+                          >2022년 우수농식품 패키지 지원사업 사업자
+                          모집(~`22.2.3)</a
+                        >
+                      </span>
+                    </div>
+                    <div class="fl_r">05.20</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popup_area fl_r w_half">
+              <div class="tit_area">
+                <h2 class="tit">팝업존</h2>
+              </div>
+              <div class="uifix">
+                <div class="popup_zone">
+                  <div class="swiper-container slideshow">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide slide">
+                        <div
+                          class="slide-image"
+                          style="background-image: url(/IMG/board_file1.jpg)"
+                        ></div>
+                        <span class="slide-title"></span>
+                      </div>
+
+                      <div class="swiper-slide slide">
+                        <div
+                          class="slide-image"
+                          style="background-image: url(/IMG/board_file2.jpg)"
+                        ></div>
+                        <span class="slide-title"></span>
+                      </div>
+                    </div>
+
+                    <div class="slideshow-navigation">
+                      <div class="slideshow-navigation-button prev">
+                        <span class="fas fa-chevron-left"></span>
+                      </div>
+                      <div class="slideshow-navigation-button next">
+                        <span class="fas fa-chevron-right"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
       </section>
+      <section class="background">
+        <div class="wrap_comn">
+          <div class="swiper-container slideshow2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide">
+                <div
+                  class="slide-image"
+                  style="background-image: url(/IMG/banner01.jpg)"
+                ></div>
+                <span class="slide-title">야채</span>
+              </div>
+
+              <div class="swiper-slide slide">
+                <div
+                  class="slide-image"
+                  style="background-image: url(/IMG/banner02.jpg)"
+                ></div>
+                <span class="slide-title">방울토마토</span>
+              </div>
+
+              <div class="swiper-slide slide">
+                <div
+                  class="slide-image"
+                  style="background-image: url(/IMG/banner03.jpg)"
+                ></div>
+                <span class="slide-title">과일</span>
+              </div>
+            </div>
+
+            <div class="slideshow-pagination"></div>
+
+            <div class="slideshow-navigation">
+              <div class="slideshow-navigation-button prev">
+                <span class="fas fa-chevron-left"></span>
+              </div>
+              <div class="slideshow-navigation-button next">
+                <span class="fas fa-chevron-right"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="wrap_comn">
+        <div class="guide_area uifix">
+          <a href="#" class="logo"></a>
+          <div class="guide_desc">
+            <ul class="guide_menu">
+              <li>
+                <a href="" title="이용안내">이용안내</a>
+              </li>
+              <li>
+                <a href="" title="개인정보처리방침">개인정보처리방침</a>
+              </li>
+              <li>
+                <a href="" title="뷰어다운로드">뷰어다운로드</a>
+              </li>
+              <li>
+                <a href="" title="저작권보호정책">저작권보호정책</a>
+              </li>
+              <li>
+                <a href="" title="전자우편주소수집거부">전자우편주소수집거부</a>
+              </li>
+              <li>
+                <a href="" title="오시는길">오시는길</a>
+              </li>
+              <li>
+                <a href="" title="사이트맵">사이트맵</a>
+              </li>
+            </ul>
+            <!-- guide menu -->
+            <ul class="guide_info">
+              <li>[58326] 전라남도 나주시 문화로 227 한국농수산식품유통공사</li>
+              <li>전화 : 061-931-1083</li>
+              <li>팩스 : 061-804-4535</li>
+              <li>E-mail : kamis@at.or.kr</li>
+              <li>
+                COPYRIGHT @2012 by Korea Agro-Fisheries &amp; Food Trade
+                Corporation ALL RIGHTS RESERVED.
+              </li>
+            </ul>
+          </div>
+          <!-- guide desc -->
+          <a href="#" class="gcs_ico"></a>
+        </div>
+        <!-- guide area -->
+        <div class="direct_area uifix">
+          <div class="sns_area fl_l">
+            <ul>
+              <li class="fl_l">
+                <a href="">
+                  <i class="ico sns fb"></i>
+                </a>
+              </li>
+              <li class="fl_l">
+                <a href="">
+                  <i class="ico sns twt"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- sns_area -->
+          <div class="link_area fl_r">
+            <select
+              id="footerFamilySite"
+              name="footerFamilySite"
+              onchange="javascript:goFamilySite(this);"
+            >
+              <option>패밀리 사이트</option>
+              <option value="http://www.at.or.kr">aT통합홈페이지</option>
+              <option value="http://www.kati.net/">KATI 농식품수출정보</option>
+              <option value="https://www.atfis.or.kr/home/index.do">
+                FIS식품산업통계정보
+              </option>
+              <option value="http://www.atfis.or.kr/fip/front/index.do">
+                한국외식산업정보포털(The외식)
+              </option>
+              <option value="http://atess.at.or.kr/">수출지원시스템</option>
+              <option value="http://global.at.or.kr/">
+                aT수출업체종합지원시스템
+              </option>
+              <option value="http://www.foodbiz.or.kr/">
+                식품기업지원관리시스템
+              </option>
+              <option value="http://www.agrotrade.net/">AgroTrade</option>
+              <!-- <option value="http://whimori.at.or.kr">Whimori(휘모리 브랜드)</option> -->
+              <option value="http://www.eat.co.kr/attach/cyber/index.htm">
+                aT농식품거래소
+              </option>
+              <option value="http://www.baroinfo.com">바로정보</option>
+              <option value="http://www.atbid.co.kr/">
+                비축농산물 전자입찰시스템
+              </option>
+              <option value="https://www.agromarket.kr">
+                정가수의매매 예약정보제공 시스템
+              </option>
+              <option value="http://atcenter.at.or.kr">aTCenter</option>
+              <option value="http://edu.at.or.kr">aT농식품유통교육원</option>
+              <option value="http://yfmc.at.or.kr">aT화훼공판장</option>
+              <option value="http://thesool.com">더 술</option>
+              <option value="https://bms.at.or.kr/index.do">BMS</option>
+              <!-- <option value="http://www.foodbiz.or.kr/">aT농수산식품기업지원센터</option>
+              <option value="http://www.kati.net/">KATI</option>
+              <option value="http://www.agrotrade.net/">Agro Trade</option>
+              <option value="http://atcenter.at.or.kr">aT센터</option>
+              <option value="http://whimori.at.or.kr">휘모리</option>
+               option value="http://forestproduct.at.or.kr">한국의 임산물</option
+              <option value="http://atess.at.or.kr/">수출지원시스템</option>
+              <option value="http://global.at.or.kr/">수출업체정보</option>
+              <option value="http://yfmc.at.or.kr">aT화훼공판장</option>
+              <option value="http://edu.at.or.kr">aT농식품유통교육원</option>
+              <option value="http://www.eat.co.kr/attach/cyber/index.htm">사이버거래소</option>
+              <option value="http://www.atbid.co.kr/">전자입찰</option> -->
+            </select>
+            <select
+              id="footerRelOffice"
+              name="footerRelOffice"
+              onchange="javascript:goRelOffice(this);"
+            >
+              <option>유관기관</option>
+              <!-- <option value="http://www.maf.go.kr/">농림축산식품부</option> -->
+              <option value="http://www.mafra.go.kr/">농림축산식품부</option>
+              <option value="http://www.naqs.go.kr/">
+                국립농산물품질관리원
+              </option>
+              <option value="http://www.naas.go.kr/">
+                농촌진흥청 국립농업과학원
+              </option>
+              <option value="http://www.qia.go.kr/">농림축산검역본부</option>
+              <option value="http://www.seed.go.kr/">국립종자원</option>
+              <option value="http://www.kma.go.kr/">기상청</option>
+              <option value="http://www.ipet.re.kr/">
+                농림수산식품기술기획평가원
+              </option>
+              <option value="http://www.epis.or.kr/">
+                농림수산식품교육문화정보원
+              </option>
+              <option value="http://www.ati.go.kr/">농식품공무원교육원</option>
+              <!-- <option value="http://www.agrihrd.or.kr/">농업인재개발원</option> -->
+              <option value="http://www.rda.go.kr/">농촌진흥청</option>
+              <option value="http://www.nonghyup.com/">농협</option>
+              <option value="http://www.forest.go.kr">산림청</option>
+              <option value="http://www.suhyup.co.kr/">수협</option>
+              <option value="http://www.ekr.or.kr">한국농어촌공사</option>
+              <option value="https://www.af.ac.kr">한국농수산대학</option>
+              <option value="http://www.krei.re.kr/">한국농촌경제연구원</option>
+              <option value="http://www.kfri.re.kr/">한국식품연구원</option>
+              <option value="http://www.sonosa.or.kr/">
+                남북교류협력지원협회
+              </option>
+              <!-- <option value="http://market.affis.net/">도매시장통합홈페이지</option> -->
+            </select>
+          </div>
+        </div>
+        <!-- direct_area -->
+      </div>
+      <!-- wrap comn -->
+    </footer>
     <script src="/JS/system.js"></script>
+    <script src="/JS/slide_show.js"></script>
   </body>
 </html>

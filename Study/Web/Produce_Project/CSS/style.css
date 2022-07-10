@@ -53,6 +53,128 @@ a {
   font-size: 13px;
 }
 
+.nav_0101 {
+  background-image: url("/IMG/gnb_bg0101.png");
+}
+
+.nav_0102 {
+  background-image: url("/IMG/gnb_bg0102.png");
+}
+
+.nav_0103 {
+  background-image: url("/IMG/gnb_bg0103.png");
+}
+
+.nav_0104 {
+  background-image: url("/IMG/gnb_bg0104.png");
+}
+
+.nav_0105 {
+  background-image: url("/IMG/gnb_bg0105.png");
+}
+
+.nav_0201 {
+  background-image: url("/IMG/gnb_bg0201.png");
+}
+
+.nav_0202 {
+  background-image: url("/IMG/gnb_bg0202.png");
+}
+
+.nav_0203 {
+  background-image: url("/IMG/gnb_bg0203.png");
+}
+
+.nav_0204 {
+  background-image: url("/IMG/gnb_bg0204.png");
+}
+
+.nav_0301 {
+  background-image: url("/IMG/gnb_bg0301.png");
+}
+
+.nav_0401 {
+  background-image: url("/IMG/gnb_bg0401.png");
+}
+.nav_0402 {
+  background-image: url("/IMG/gnb_bg0402.png");
+}
+.nav_0403 {
+  background-image: url("/IMG/gnb_bg0403.png");
+}
+
+.nav_0501 {
+  background-image: url("/IMG/gnb_bg0501.png");
+}
+.nav_0502 {
+  background-image: url("/IMG/gnb_bg0502.png");
+}
+.nav_0503 {
+  background-image: url("/IMG/gnb_bg0503.png");
+}
+.nav_0504 {
+  background-image: url("/IMG/gnb_bg0504.png");
+}
+.nav_0505 {
+  background-image: url("/IMG/gnb_bg0505.png");
+}
+
+.nav_0601 {
+  background-image: url("/IMG/gnb_bg0601.png");
+}
+
+.nav_0602 {
+  background-image: url("/IMG/gnb_bg0602.png");
+}
+
+.nav_0603 {
+  background-image: url("/IMG/gnb_bg0603.png");
+}
+
+.nav_0701 {
+  background-image: url("/IMG/gnb_bg0701.png");
+}
+
+.nav_0702 {
+  background-image: url("/IMG/gnb_bg0702.png");
+}
+
+.nav_0703 {
+  background-image: url("/IMG/gnb_bg0703.png");
+}
+
+.nav_0704 {
+  background-image: url("/IMG/gnb_bg0704.png");
+}
+
+.nav_0801 {
+  background-image: url("/IMG/logo2.svg");
+}
+
+.nav_0802 {
+  background-image: url("/IMG/gnb_bg0802.png");
+}
+
+.nav_0803 {
+  background-image: url("/IMG/gnb_bg0803.png");
+}
+
+.nav_0804 {
+  background-image: url("/IMG/gnb_bg0805.png");
+}
+.nav_0805 {
+  background-image: url("/IMG/gnb_bg0806.png");
+}
+.nav_0806 {
+  background-image: url("/IMG/gnb_bg0807.png");
+}
+.tablinks dl.last {
+  width: 202px;
+}
+.nav_0801 .last {
+  width: 202px;
+  margin-right: 0;
+}
 header .logo {
   float: left;
   background-repeat: no-repeat;
@@ -70,7 +192,7 @@ header .nav_area nav {
 
 header .nav_area li {
   margin-right: 40px;
-  padding: 5px 0 20px 0;
+  padding: 10px 0 20px 0;
   float: left;
 }
 
@@ -163,12 +285,16 @@ header .nav_area .nav_sub.active {
   display: block;
 }
 
+nav a {
+  font-size: 16px;
+}
+
 /*  header ---------------------------------------------------------------------- */
 
 main .bn_area {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/IMG/다운로드.svg");
+  background-image: url("/IMG/main_bn.png");
   height: 155px;
   background-color: initial;
   padding: 15px 0 0 70px;
@@ -176,10 +302,13 @@ main .bn_area {
 
 .bn_area .title_sub {
   font-size: 18px;
+  color: rgb(24, 59, 62);
 }
 
 .bn_area .title {
   font-size: 40px;
+  color: rgb(24, 59, 62);
+  margin-top: 8px;
   font-weight: 500;
   margin-bottom: 8px;
   display: block;
@@ -187,7 +316,9 @@ main .bn_area {
 
 .bn_area .title_desc {
   font-size: 14px;
-  width: 440px;
+  color: rgb(96, 94, 94);
+  width: 550px;
+  white-space: inherit;
 }
 
 .content_area {
@@ -195,6 +326,9 @@ main .bn_area {
   background-repeat: no-repeat;
 }
 
+.tabs {
+  font-size: 15px;
+}
 /* main ---------------------------------------*/
 
 .w_half {
@@ -234,7 +368,6 @@ main .bn_area {
 
 .tab.uifix {
   overflow: hidden;
-  height: 35px;
 }
 
 .tab_tit {
@@ -365,6 +498,7 @@ col {
   display: block;
   height: 151px;
   overflow: auto;
+  background-color: white;
 }
 
 .month_pic {
@@ -446,6 +580,7 @@ col {
 
 .ico {
   background: url("/IMG/comn_ico.png") no-repeat;
+  display: inline-block;
 }
 
 .cont_video_tit {
@@ -470,7 +605,7 @@ col {
 }
 .bn_tit {
   font-size: 20px;
-  color: white;
+  color: black;
 }
 
 .uifix:after,
@@ -499,10 +634,147 @@ ul:after {
   margin-left: -1px;
 }
 
-.tab_area {
+span.tit a {
+  font-size: 14px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.news_area .first .txt_area {
+  width: 400px;
+}
+
+.tab_area_news {
+  display: none;
+}
+
+.tab_area_news.current {
+  display: block;
+}
+
+#csbg,
+#distnews,
+#peak,
+#dataroom {
   margin-top: 25px;
 }
-span.tit a {
-  font-size: 16px;
+.news_area .txt_area {
+  width: 480px;
+  float: left;
+  font-size: 14px;
 }
-/*  import ------------------------------------------------ */
+
+.news_area .first {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(223, 220, 220);
+  margin-bottom: 25px;
+}
+
+.news_area li {
+  float: left;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.news_area div.fl_r {
+  color: gray;
+}
+.news_area li.first a {
+  color: black;
+}
+
+.news_area li a {
+  color: gray;
+}
+
+.tab_news.current .tab_tit {
+  color: white;
+}
+
+.tab_price.current .tab_tit {
+  color: white;
+}
+
+/*  footer ------------------------------------------------ */
+
+footer {
+  background: rgb(245, 245, 245);
+  padding: 45px 0 0 0;
+}
+
+footer .guide_area * {
+  color: rgb(126, 126, 126);
+  font-size: 13px;
+}
+
+footer .logo {
+  background: url("/IMG/logo.png") no-repeat;
+  width: 114px;
+  height: 70px;
+  display: block;
+  margin-right: 65px;
+  float: left;
+}
+
+footer .guide_desc .guide_menu li {
+  float: left;
+  border-right: 1px solid rgb(234, 234, 234);
+  padding: 0 10px;
+}
+
+footer .guide_area li {
+  float: left;
+  padding: 0 10px;
+}
+.guide_menu {
+  margin-bottom: 10px;
+}
+footer .guide_area .guide_info li {
+  float: left;
+}
+footer .guide_desc {
+  float: left;
+  width: 790px;
+}
+
+footer .gcs_ico {
+  background: url("/IMG/gcs_logo.png") no-repeat;
+  float: right;
+  width: 150px;
+  height: 70px;
+  display: block;
+}
+
+footer .direct_area {
+  margin-top: 35px;
+  padding: 35px 0 85px 180px;
+  border-top: 1px solid rgb(234, 234, 234);
+}
+
+.ico.sns {
+  background-position-y: -198px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: rgb(199, 199, 199);
+  margin-right: 15px;
+}
+
+.ico.sns.fb {
+  background-position-x: 10px;
+}
+
+.ico.sns.twt {
+  background-position-x: -31px;
+}
+
+footer .link_area select {
+  background: rgb(255, 255, 255);
+  width: 155px;
+  height: 30px;
+  border: 1px solid rgb(234, 234, 234);
+  padding-left: 10px;
+  font-size: 13px;
+}

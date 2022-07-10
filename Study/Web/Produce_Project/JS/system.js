@@ -26,28 +26,24 @@ tabLinks.forEach(function (el) {
   el.addEventListener("mouseout", closeTabs);
 });
 
-$(".tab_price").click(function (el) {
-  let temp_btn = document.querySelectorAll(".tab_price");
-  let temp_data = document.querySelectorAll(".tab_area");
-  let i = $(".tab_price").index(this);
+$(".tab_news").click(function (el) {
+  let temp_btn = document.querySelectorAll(".tab_news");
+  let temp_data = document.querySelectorAll(".tab_area_news");
 
-  console.log(i);
+  var btnTarget = el.currentTarget;
+  var tabs = btnTarget.dataset.tabs;
 
-  if (i <= 4) {
-    for (let x = 0; x <= 4; x++) {
-      temp_btn.item(x).classList.remove("current");
-      temp_data.item(x).classList.remove("current");
-    }
-    temp_btn.item(i).classList.add("current");
-    temp_data.item(i).classList.add("current");
-  } else {
-    for (let x = 5; x <= 9; x++) {
-      temp_btn.item(x).classList.remove("current");
-      temp_data.item(x).classList.remove("current");
-    }
-    temp_btn.item(i).classList.add("current");
-    temp_data.item(i).classList.add("current");
-  }
+  temp_btn.forEach(function (el) {
+    el.classList.remove("current");
+  });
+
+  temp_data.forEach(function (el) {
+    el.classList.remove("current");
+  });
+
+  document.querySelector("#" + tabs).classList.add("current");
+
+  btnTarget.classList.add("current");
 });
 
 function openTabs(el) {
@@ -77,6 +73,29 @@ function closeTabs(el) {
   });
 }
 
+$(".tab_price").click(function (el) {
+  let temp_btn = document.querySelectorAll(".tab_price");
+  let temp_data = document.querySelectorAll(".tab_area");
+  let i = $(".tab_price").index(this);
+
+  console.log(i);
+
+  if (i <= 4) {
+    for (let x = 0; x <= 4; x++) {
+      temp_btn.item(x).classList.remove("current");
+      temp_data.item(x).classList.remove("current");
+    }
+    temp_btn.item(i).classList.add("current");
+    temp_data.item(i).classList.add("current");
+  } else {
+    for (let x = 5; x <= 9; x++) {
+      temp_btn.item(x).classList.remove("current");
+      temp_data.item(x).classList.remove("current");
+    }
+    temp_btn.item(i).classList.add("current");
+    temp_data.item(i).classList.add("current");
+  }
+});
 //import ==================================================================
 
 const today = new Date();
@@ -84,7 +103,7 @@ const today = new Date();
 const year = today.getFullYear();
 
 const month_def = today.getMonth() + 1;
-const day_def = today.getDate() - 1;
+const day_def = today.getDate() - 3;
 
 const month = month_def / 10 > 1 ? month_def : "0" + month_def;
 
@@ -149,12 +168,11 @@ function Whole_Support() {
                   element_td.style.textAlign = "center";
                   element_td.innerText = item_list[y];
                 } else if (y == 4 && once) {
+                  let temp3 = parseInt(item_list[3].replace(",", ""));
+                  let temp4 = parseInt(item_list[4].replace(",", ""));
+
                   element_td.innerText =
-                    Math.round(
-                      (parseInt(item_list[3].replace(",", "")) -
-                        parseInt(item_list[4].replace(",", ""))) /
-                        (parseInt(item_list[4].replace(",", "")) * 100)
-                    ) + "%";
+                    Math.round(((temp3 - temp4) / temp4) * 1000) / 10 + "%";
                   once = false;
                   element_td.style.textAlign = "center";
                   y = 3;
@@ -171,8 +189,6 @@ function Whole_Support() {
     });
   }
 }
-
-console.log(parseInt("3,132".replace(",", "")));
 
 function Retail_Support() {
   const product_code = [100, 200, 300, 400, 600];
@@ -225,12 +241,11 @@ function Retail_Support() {
                   element_td.style.textAlign = "center";
                   element_td.innerText = item_list[y];
                 } else if (y == 4 && once) {
+                  let temp3 = parseInt(item_list[3].replace(",", ""));
+                  let temp4 = parseInt(item_list[4].replace(",", ""));
+
                   element_td.innerText =
-                    Math.round(
-                      ((parseInt(item_list[3]) - parseInt(item_list[4])) /
-                        parseInt(item_list[4])) *
-                        100
-                    ) + "%";
+                    Math.round(((temp3 - temp4) / temp4) * 1000) / 10 + "%";
                   once = false;
                   element_td.style.textAlign = "center";
                   y = 3;
