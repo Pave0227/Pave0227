@@ -634,6 +634,14 @@ ul:after {
   margin-left: -1px;
 }
 
+.tr_whole.active {
+  background-color: rgb(38, 103, 74);
+}
+
+.tr_retail.active {
+  background-color: rgb(38, 103, 74);
+}
+
 span.tit a {
   font-size: 14px;
 }

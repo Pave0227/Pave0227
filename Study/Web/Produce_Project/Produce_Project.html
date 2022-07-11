@@ -13,6 +13,7 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -344,7 +345,6 @@
                 <li data-tabs="tab_tb0101" class="tab_price current">
                   <h3 class="tab_tit">식량작물</h3>
                 </li>
-
                 <li data-tabs="tab_tb0102" class="tab_price">
                   <h3 class="tab_tit">채소류</h3>
                 </li>
@@ -368,7 +368,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -387,7 +387,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -406,7 +406,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -425,7 +425,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -444,7 +444,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -455,6 +455,7 @@
                 <tbody id="whole"></tbody>
               </table>
             </div>
+            <div class="pop_graph pop_main_graph"></div>
           </article>
           <article class="w_half fl_r table_comn">
             <div class="tit_area">
@@ -492,7 +493,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -511,7 +512,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -530,7 +531,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -549,7 +550,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -568,7 +569,7 @@
                 <thead>
                   <tr>
                     <th scope="col">품목</th>
-                    <th scope="col">단위</th>
+                    <th scope="col">품질</th>
                     <th scope="col"><span class="time_set"></span></th>
                     <th scope="col">등락률</th>
                     <th scope="col">전일</th>
@@ -579,6 +580,7 @@
                 <tbody id="retail"></tbody>
               </table>
             </div>
+            <div class="pop_graph pop_main_graph2"></div>
           </article>
         </div>
         <div class="wrap_comn">
@@ -1286,7 +1288,10 @@
       </div>
       <!-- wrap comn -->
     </footer>
+
     <script src="/JS/system.js"></script>
     <script src="/JS/slide_show.js"></script>
+    <script src="/JS/main.js"></script>
+    <script src="/JS/price_chart.js"></script>
   </body>
 </html>

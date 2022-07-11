@@ -183,9 +183,6 @@ class Slideshow {
         ".pagination-separator-loader"
       );
 
-    console.log(swiper.pagination);
-    // console.log(swiper.activeIndex);
-
     // Reset and animate
     TweenMax.set(this.DOM.paginationItemsLoader, { scaleX: 0 });
     TweenMax.to(
