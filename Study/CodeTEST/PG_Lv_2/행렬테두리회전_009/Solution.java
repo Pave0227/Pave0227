@@ -1,7 +1,5 @@
 package PG_Lv_2.행렬테두리회전_009;
 
-import java.util.Arrays;
-
 public class Solution
 {
     public static void main(String[] arg)
@@ -31,8 +29,10 @@ public class Solution
             }
         }
 
-        for (int x = 0; x < 2; x++)
+        for (int x = 0; x < queries.length; x++)
         {
+            int min = int_table[int_table.length - 1][int_table[0].length - 1];
+
             int start_x = queries[x][0] - 1;
             int start_y = queries[x][1] - 1;
             int end_x = queries[x][2] - 1;
@@ -43,47 +43,68 @@ public class Solution
             int down_left = int_table[end_x][start_y];
             int down_right = int_table[end_x][end_y];
 
+            // 윗부분
             for (int i = end_y; i > start_y; i--)
             {
+                if (min > int_table[start_x][i])
+                {
+
+                }
                 int_table[start_x][i] = int_table[start_x][i - 1];
             }
 
+            // 오른쪽
             for (int i = end_x; i > start_x; i--)
             {
                 if (i == start_x + 1)
                 {
                     int_table[i][end_y] = upper;
-                    continue;
+                    break;
                 }
                 int_table[i][end_y] = int_table[i - 1][end_y];
             }
 
+            // 아래
             for (int i = start_y; i < end_y; i++)
             {
                 if (i == end_y - 1)
                 {
                     int_table[end_x][i] = down_right;
-                    continue;
+                    break;
                 }
 
                 int_table[end_x][i] = int_table[end_x][i + 1];
             }
 
+            // 왼쪽
             for (int i = start_x; i < end_x; i++)
             {
                 if (i == end_x - 1)
                 {
                     int_table[i][start_y] = down_left;
-                    continue;
+                    break;
                 }
                 int_table[i][start_y] = int_table[i + 1][start_y];
             }
 
         }
 
-        for (int[] tab : int_table)
+        String[] test_arr = new String[int_table.length];
+
+        for (int x = 0; x < test_arr.length; x++)
         {
-            System.out.println(Arrays.toString(tab));
+            test_arr[x] = "";
+            for (int y = 0; y < int_table[x].length; y++)
+            {
+
+                test_arr[x] += int_table[x][y] + "\t";
+            }
+        }
+
+        for (String test : test_arr)
+        {
+            System.out.println(test);
+            System.out.println();
         }
 
         int[] answer =
