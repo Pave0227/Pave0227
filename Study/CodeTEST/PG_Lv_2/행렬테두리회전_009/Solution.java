@@ -1,5 +1,7 @@
 package PG_Lv_2.행렬테두리회전_009;
 
+import java.util.Arrays;
+
 public class Solution
 {
     public static void main(String[] arg)
@@ -20,6 +22,8 @@ public class Solution
     public int[] solution(int rows, int columns, int[][] queries)
     {
         int[][] int_table = new int[rows][columns];
+
+        int[] result = new int[queries.length];
 
         for (int x = 0; x < int_table.length; x++)
         {
@@ -43,19 +47,22 @@ public class Solution
             int down_left = int_table[end_x][start_y];
             int down_right = int_table[end_x][end_y];
 
+            min = Check_Min(min, upper);
+            min = Check_Min(min, down_left);
+            min = Check_Min(min, down_right);
+
             // 윗부분
             for (int i = end_y; i > start_y; i--)
             {
-                if (min > int_table[start_x][i])
-                {
-
-                }
+                min = Check_Min(min, int_table[start_x][i]);
                 int_table[start_x][i] = int_table[start_x][i - 1];
             }
 
             // 오른쪽
             for (int i = end_x; i > start_x; i--)
             {
+                min = Check_Min(min, int_table[i][end_y]);
+
                 if (i == start_x + 1)
                 {
                     int_table[i][end_y] = upper;
@@ -67,6 +74,8 @@ public class Solution
             // 아래
             for (int i = start_y; i < end_y; i++)
             {
+                min = Check_Min(min, int_table[end_x][i]);
+
                 if (i == end_y - 1)
                 {
                     int_table[end_x][i] = down_right;
@@ -79,6 +88,8 @@ public class Solution
             // 왼쪽
             for (int i = start_x; i < end_x; i++)
             {
+                min = Check_Min(min, int_table[i][start_y]);
+
                 if (i == end_x - 1)
                 {
                     int_table[i][start_y] = down_left;
@@ -86,6 +97,8 @@ public class Solution
                 }
                 int_table[i][start_y] = int_table[i + 1][start_y];
             }
+
+            result[x] = min;
 
         }
 
@@ -107,8 +120,20 @@ public class Solution
             System.out.println();
         }
 
-        int[] answer =
-        {};
-        return answer;
+        System.out.println(Arrays.toString(result));
+
+        return result;
+    }
+
+    private int Check_Min(int a, int b)
+    {
+        if (a > b)
+        {
+            return b;
+        }
+        else
+        {
+            return a;
+        }
     }
 }
