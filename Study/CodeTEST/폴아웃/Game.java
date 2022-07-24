@@ -68,10 +68,11 @@ public class Game
                 {
                 case 1:
                 {
-                    if ((int) Math.random() * 100 <= player.Weapon_1().Weapon_Acc())
+                    if ((int) (Math.random() * 100) <= player.Weapon_1().Weapon_Acc())
                     {
-                        if ((int) Math.random() * 100 <= player.Crt())
+                        if ((int) ((Math.random() * 100)) <= player.Crt())
                         {
+                            System.out.print(player.Crt());
                             System.out.println("치명타!");
                             System.out
                                     .println((player.Weapon_1().Weapon_Damage() * 2) - enemy.Dt() + "의 데미지을 적중 시켰습니다.");
@@ -96,10 +97,12 @@ public class Game
                 }
                 case 2:
                 {
-                    if ((int) Math.random() * 100 + 1 <= player.Weapon_2().Weapon_Acc())
+                    if ((int) (Math.random() * 100) <= player.Weapon_2().Weapon_Acc())
                     {
-                        if ((int) Math.random() * 100 + 1 <= player.Crt())
+                        if ((int) (Math.random() * 100) <= player.Crt())
                         {
+                            System.out.print(player.Crt());
+
                             System.out.println("치명타!");
                             System.out
                                     .println((player.Weapon_2().Weapon_Damage() * 2) - enemy.Dt() + "의 데미지을 적중 시켰습니다.");
@@ -132,6 +135,7 @@ public class Game
 
                 System.out.println(enemy.Damage() - player.Armor().Armor_Point() < 0 ? 0
                         : enemy.Damage() - player.Armor().Armor_Point() + "의 데미지을 입었습니다.");
+                System.out.println("나의 남은 체력 :" + player.Hp());
 
             }
 
@@ -160,9 +164,9 @@ public class Game
             {
             case 1:
             {
-                if ((int) Math.random() * 100 + 1 <= player.Weapon_1().Weapon_Acc())
+                if ((int) (Math.random() * 100) + 1 <= player.Weapon_1().Weapon_Acc())
                 {
-                    if ((int) Math.random() * 100 + 1 <= player.Crt())
+                    if ((int) (Math.random() * 100) + 1 <= player.Crt())
                     {
                         System.out.println("치명타!");
                         System.out.println((player.Weapon_1().Weapon_Damage() * 2) - enemy.Dt() + "의 데미지을 적중 시켰습니다.");
@@ -186,9 +190,9 @@ public class Game
             }
             case 2:
             {
-                if ((int) Math.random() * 100 + 1 <= player.Weapon_2().Weapon_Acc())
+                if ((int) (Math.random() * 100) + 1 <= player.Weapon_2().Weapon_Acc())
                 {
-                    if ((int) Math.random() * 100 + 1 <= player.Crt())
+                    if ((int) (Math.random() * 100) + 1 <= player.Crt())
                     {
                         System.out.println("치명타!");
                         System.out.println((player.Weapon_2().Weapon_Damage() * 2) - enemy.Dt() + "의 데미지을 적중 시켰습니다.");

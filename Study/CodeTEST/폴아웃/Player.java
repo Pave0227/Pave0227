@@ -22,50 +22,6 @@ class Player
         private Weapon weapon_2; // 보조
         private Armor armor; // 방어구
 
-        protected int Hp()
-        {
-                return this.hp;
-        }
-
-        protected void Hp_Change(int result)
-        {
-                this.hp += result;
-        }
-
-        protected int Ap()
-        {
-                return this.ap;
-        }
-
-        protected void Ap_Change(int result)
-        {
-                this.ap += result;
-        }
-
-        protected int Crt()
-        {
-                return this.crt;
-        }
-
-        protected int Evs()
-        {
-                return this.evs;
-        }
-
-        protected Weapon Weapon_1()
-        {
-                return this.weapon_1;
-        }
-
-        protected Weapon Weapon_2()
-        {
-                return this.weapon_2;
-        }
-
-        protected Armor Armor()
-        {
-                return this.armor;
-        }
         // S.P.E.C.I.A.L ========================================
 
         private int strength; // 힘. 근접공격력 10% , 무게한계 20씩 증가, 방어구 요구치
@@ -610,5 +566,50 @@ class Player
 
                 this.carry_weight = 200 + (this.strength * 10); // 짐 중량
 
+        }
+
+        protected int Hp()
+        {
+                return this.hp;
+        }
+
+        protected void Hp_Change(int result)
+        {
+                this.hp += result;
+        }
+
+        protected int Ap()
+        {
+                return this.ap;
+        }
+
+        protected void Ap_Change(int result)
+        {
+                this.ap += result;
+        }
+
+        protected int Crt()
+        {
+                return this.crt;
+        }
+
+        protected int Evs()
+        {
+                return this.evs;
+        }
+
+        protected Weapon Weapon_1()
+        {
+                return this.weapon_1;
+        }
+
+        protected Weapon Weapon_2()
+        {
+                return this.weapon_2;
+        }
+
+        protected Armor Armor()
+        {
+                return this.armor;
         }
 }
